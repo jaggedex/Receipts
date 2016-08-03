@@ -15,7 +15,7 @@ namespace ReceiptsWebMVCApp.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Your application description page44446.";
 
             return View();
         }
