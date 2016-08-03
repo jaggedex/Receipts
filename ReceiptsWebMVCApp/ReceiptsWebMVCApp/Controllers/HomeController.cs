@@ -22,7 +22,7 @@ namespace ReceiptsWebMVCApp.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your contact page21.";
 
             return View();
         }
