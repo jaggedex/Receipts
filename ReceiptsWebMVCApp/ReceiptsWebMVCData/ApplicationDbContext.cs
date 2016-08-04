@@ -3,12 +3,12 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using ReceiptsWebMVCApp.Models;
 
 namespace ReceiptsWebMVCData
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public IDbSet<Salad> Salads { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -18,5 +18,6 @@ namespace ReceiptsWebMVCData
         {
             return new ApplicationDbContext();
         }
+       
     }
 }

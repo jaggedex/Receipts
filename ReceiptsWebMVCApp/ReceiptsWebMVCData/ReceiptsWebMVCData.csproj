@@ -59,6 +59,8 @@
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
     <Compile Include="ApplicationUser.cs" />
+    <Compile Include="Comment.cs" />
+    <Compile Include="Salad.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
@@ -66,12 +68,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ReceiptsWebMVCApp\ReceiptsWebMVCApp.csproj">
-      <Project>{4e5e3d59-f194-4536-84b7-85723e6febf4}</Project>
-      <Name>ReceiptsWebMVCApp</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
