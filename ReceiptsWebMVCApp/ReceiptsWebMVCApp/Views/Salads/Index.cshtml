@@ -1,0 +1,57 @@
+﻿@model ReceiptsWebMVCApp.Models.SaladViewModels
+@{
+    ViewBag.Title = "Salads";
+}
+<div class="jumbotron">
+    <div class="container text-center">
+        <h3>@Model.Title</h3>
+        <h5>Начин на приготвяне:</h5>
+        <p>@Model.Description</p>
+        <div>
+            @if (User.IsInRole("Administrators") || (Model.Author != null && User.Identity.Name == Model.Author.UserName))
+            {
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) @:|
+            }
+            @Html.ActionLink("Details", "Details", new { id = Model.Id })
+            @if (User.IsInRole("Administrators"))
+            {
+                @:| @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
+            }
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bg-3 text-center">
+    <h3>Най-добри рецепти от тази категория</h3><br>
+    <div class="row">
+        <div class="col-sm-4">
+            <p>Some text..</p>
+            <img src="TODO" class="img-responsive" style="width:100%" alt="Image">
+        </div>
+        <div class="col-sm-4">
+            <p>Some text..</p>
+            <img src="TODO" class="img-responsive" style="width:100%" alt="Image">
+        </div>
+        <div class="col-sm-4">
+            <p>Some text..</p>
+            <img src="TODO" class="img-responsive" style="width:100%" alt="Image">
+        </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-4">
+            <p>Some text..</p>
+            <img src="TODO" class="img-responsive" style="width:100%" alt="Image">
+        </div>
+        <div class="col-sm-4">
+            <p>Some text..</p>
+            <img src="TODO" class="img-responsive" style="width:100%" alt="Image">
+        </div>
+        <div class="col-sm-4">
+            <p>Some text..</p>
+            <img src="TODO" class="img-responsive" style="width:100%" alt="Image">
+        </div>
+    </div>
+</div><br><br>
