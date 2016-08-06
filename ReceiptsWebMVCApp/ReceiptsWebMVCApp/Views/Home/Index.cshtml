@@ -1,6 +1,8 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+@model ReceiptsWebMVCApp.Models.ReceiptsViewModels
+
 <br />
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -15,7 +17,7 @@
     <div class="carousel-inner" role="listbox">
 
         <div class="item active">
-            <a href="/Salads/Index">
+            <a href="/Receipts/Salads">
                 <img src="~/Content/Images/salads.jpg" alt="Image">
                 <div class="carousel-caption">
                     <h1>ПРЕДЯСТИЯ</h1>
@@ -62,39 +64,15 @@
     <div class="row">
         <div class="col-sm-4">
             <p><h4>Предястия</h4></p>
-            <div class="well">
-                <p>The images are set to be circular and responsive. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui..</p>
-            </div>
-            <div class="well">
-                <p>The images are set to be circular and responsive. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui..</p>
-            </div>
-            <div class="well">
-                <p>The images are set to be circular and responsive. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui..</p>
-            </div>
+            @Html.DisplayFor(x => x.Salads)
         </div>
         <div class="col-sm-4">
             <p><h4>Основни ястия</h4></p>
-            <div class="well">
-                <p>The images are set to be circular and responsive. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui..</p>
-            </div>
-            <div class="well">
-                <p>The images are set to be circular and responsive. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui..</p>
-            </div>
-            <div class="well">
-                <p>The images are set to be circular and responsive. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui..</p>
-            </div>
+            @Html.DisplayFor(x => x.Meals)
         </div>
         <div class="col-sm-4">
             <p><h4>Десерти</h4></p>
-            <div class="well">
-                <p>The images are set to be circular and responsive. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui..</p>
-            </div>
-            <div class="well">
-                <p>The images are set to be circular and responsive. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-            </div>
-            <div class="well">
-                <p>The images are set to be circular and responsive. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-            </div>
+            @Html.DisplayFor(x => x.Deserts)
         </div>
     </div>
 </div><br>

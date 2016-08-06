@@ -9,6 +9,10 @@ namespace ReceiptsWebMVCData
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public IDbSet<Salad> Salads { get; set; }
+
+        public IDbSet<Meal> Meals { get; set; }
+
+        public IDbSet<Dessert> Desserts { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

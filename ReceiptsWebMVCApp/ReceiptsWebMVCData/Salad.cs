@@ -30,6 +30,9 @@ namespace ReceiptsWebMVCData
 
         public int Rating { get; set; }
 
-        public IEnumerable<Comment> Comments { get; set; }
-    }
+        public IEnumerable<Comment> Comments
+        {
+            get; set;
+        }
+        }
 }

@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ReceiptsWebMVCApp.Models.FoodViewModels>
+@{
+    ViewBag.Title = "ReceiptsView";
+}
+
+@foreach (var item in Model)
+{
+    <div class="well">
+        <p>
+            @item.Title
+        </p>
+    </div>
+}
