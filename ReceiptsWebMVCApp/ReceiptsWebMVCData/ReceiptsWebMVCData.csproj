@@ -62,6 +62,7 @@
     <Compile Include="Comment.cs" />
     <Compile Include="Dessert.cs" />
     <Compile Include="Meal.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="Salad.cs" />
   </ItemGroup>
   <ItemGroup>

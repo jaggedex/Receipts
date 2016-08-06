@@ -64,4 +64,3 @@ D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\PROJECT\ReceiptsWebMVCApp\ReceiptsWebMVCData\
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\PROJECT\ReceiptsWebMVCApp\ReceiptsWebMVCData\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\PROJECT\ReceiptsWebMVCApp\ReceiptsWebMVCData\obj\Debug\ReceiptsWebMVCData.dll
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\PROJECT\ReceiptsWebMVCApp\ReceiptsWebMVCData\obj\Debug\ReceiptsWebMVCData.pdb
-D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\PROJECT\ReceiptsWebMVCApp\ReceiptsWebMVCData\obj\Debug\ReceiptsWebMVCData.csprojResolveAssemblyReference.cache

@@ -1,12 +1,14 @@
 ﻿using ReceiptsWebMVCData;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Web;
 
 namespace ReceiptsWebMVCApp.Models
 {
+    
     public class FoodViewModels
     {
         public int Id { get; set; }
@@ -17,7 +19,7 @@ namespace ReceiptsWebMVCApp.Models
         public ApplicationUser Author { get; set; }
 
         public DateTime Date { get; set; }
-
+        
         public static Expression<Func<Salad, FoodViewModels>> Salad
         {
             get
@@ -32,6 +34,7 @@ namespace ReceiptsWebMVCApp.Models
                 };
             }
         }
+      
         public static Expression<Func<Dessert, FoodViewModels>> Dessert
         {
             get
@@ -46,7 +49,7 @@ namespace ReceiptsWebMVCApp.Models
                 };
             }
         }
-
+      
         public static Expression<Func<Meal, FoodViewModels>> Meal
         {
             get

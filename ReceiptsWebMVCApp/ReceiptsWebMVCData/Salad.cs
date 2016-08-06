@@ -28,6 +28,8 @@ namespace ReceiptsWebMVCData
 
         public ApplicationUser Author { get; set; }
 
+        public string AuthorId { get; set; }
+
         public int Rating { get; set; }
 
         public IEnumerable<Comment> Comments

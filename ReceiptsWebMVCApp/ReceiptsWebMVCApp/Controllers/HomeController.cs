@@ -8,9 +8,9 @@ using System.Web.Mvc;
 
 namespace ReceiptsWebMVCApp.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        protected ApplicationDbContext db = new ApplicationDbContext();
+      
 
         public ActionResult Index()
         {

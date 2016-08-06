@@ -13,6 +13,10 @@ namespace ReceiptsWebMVCData
         public IDbSet<Meal> Meals { get; set; }
 
         public IDbSet<Dessert> Desserts { get; set; }
+
+        public IDbSet<Product> Products { get; set; }
+
+        public IDbSet<Comment> Comments { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
