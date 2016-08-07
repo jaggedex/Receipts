@@ -64,6 +64,9 @@
     <Compile Include="Meal.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Salad.cs" />
+    <Compile Include="DessertProductTags.cs" />
+    <Compile Include="MealProductTags.cs" />
+    <Compile Include="SaladProductTags.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

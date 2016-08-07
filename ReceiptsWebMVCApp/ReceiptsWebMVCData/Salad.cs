@@ -15,7 +15,7 @@ namespace ReceiptsWebMVCData
         }
 
         [Key]
-        public int Id { get; set; }
+        public int ID { get; set; }
 
         [Required]
         [StringLength(100)]

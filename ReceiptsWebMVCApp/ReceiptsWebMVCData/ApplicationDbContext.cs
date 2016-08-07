@@ -17,6 +17,13 @@ namespace ReceiptsWebMVCData
         public IDbSet<Product> Products { get; set; }
 
         public IDbSet<Comment> Comments { get; set; }
+
+        public IDbSet<SaladProductTags> SaladProductTags { get; set; }
+
+        public IDbSet<MealProductTags> MealProductTags { get; set; }
+
+        public IDbSet<DessertProductTags> DessertProductTags { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -26,6 +33,6 @@ namespace ReceiptsWebMVCData
         {
             return new ApplicationDbContext();
         }
-       
+        
     }
 }

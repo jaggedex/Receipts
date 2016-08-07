@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace ReceiptsWebMVCData
 {
-    public class Comment
+    public class SaladProductTags
     {
         [Key]
         public int ID { get; set; }
 
-        public string Text { get; set; }
-
-        public ApplicationUser Author { get; set; }
+        public int SaladID { get; set; }
+        
+        public int ProductID { get; set; }
     }
 }

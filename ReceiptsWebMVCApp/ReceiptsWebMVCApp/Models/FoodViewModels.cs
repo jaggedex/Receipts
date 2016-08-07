@@ -26,7 +26,7 @@ namespace ReceiptsWebMVCApp.Models
             {
                 return e => new FoodViewModels()
                 {
-                    Id = e.Id,
+                    Id = e.ID,
                     Title = e.Title,
                     Date = e.Date,
                     Description = e.Description,
@@ -41,7 +41,7 @@ namespace ReceiptsWebMVCApp.Models
             {
                 return e => new FoodViewModels()
                 {
-                    Id = e.Id,
+                    Id = e.ID,
                     Title = e.Title,
                     Date = e.Date,
                     Description = e.Description,
@@ -56,7 +56,7 @@ namespace ReceiptsWebMVCApp.Models
             {
                 return e => new FoodViewModels()
                 {
-                    Id = e.Id,
+                    Id = e.ID,
                     Title = e.Title,
                     Date = e.Date,
                     Description = e.Description,

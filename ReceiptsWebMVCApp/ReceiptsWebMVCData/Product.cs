@@ -7,13 +7,12 @@ using System.Threading.Tasks;
 
 namespace ReceiptsWebMVCData
 {
-    public class Comment
+    public class Product
     {
         [Key]
         public int ID { get; set; }
 
-        public string Text { get; set; }
-
-        public ApplicationUser Author { get; set; }
+        public string ProductName { get; set; }
+        
     }
 }

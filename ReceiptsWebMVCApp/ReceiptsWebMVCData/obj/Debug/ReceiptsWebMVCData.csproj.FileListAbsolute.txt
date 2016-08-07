@@ -64,3 +64,17 @@ D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\PROJECT\ReceiptsWebMVCApp\ReceiptsWebMVCData\
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\PROJECT\ReceiptsWebMVCApp\ReceiptsWebMVCData\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\PROJECT\ReceiptsWebMVCApp\ReceiptsWebMVCData\obj\Debug\ReceiptsWebMVCData.dll
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\PROJECT\ReceiptsWebMVCApp\ReceiptsWebMVCData\obj\Debug\ReceiptsWebMVCData.pdb
+C:\Users\Tono\Desktop\ReceiptsWebMVCApp\ReceiptsWebMVCData\bin\Debug\ReceiptsWebMVCData.dll.config
+C:\Users\Tono\Desktop\ReceiptsWebMVCApp\ReceiptsWebMVCData\bin\Debug\ReceiptsWebMVCData.dll
+C:\Users\Tono\Desktop\ReceiptsWebMVCApp\ReceiptsWebMVCData\bin\Debug\ReceiptsWebMVCData.pdb
+C:\Users\Tono\Desktop\ReceiptsWebMVCApp\ReceiptsWebMVCData\bin\Debug\EntityFramework.dll
+C:\Users\Tono\Desktop\ReceiptsWebMVCApp\ReceiptsWebMVCData\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tono\Desktop\ReceiptsWebMVCApp\ReceiptsWebMVCData\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Tono\Desktop\ReceiptsWebMVCApp\ReceiptsWebMVCData\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Tono\Desktop\ReceiptsWebMVCApp\ReceiptsWebMVCData\bin\Debug\EntityFramework.xml
+C:\Users\Tono\Desktop\ReceiptsWebMVCApp\ReceiptsWebMVCData\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tono\Desktop\ReceiptsWebMVCApp\ReceiptsWebMVCData\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Tono\Desktop\ReceiptsWebMVCApp\ReceiptsWebMVCData\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Tono\Desktop\ReceiptsWebMVCApp\ReceiptsWebMVCData\obj\Debug\ReceiptsWebMVCData.dll
+C:\Users\Tono\Desktop\ReceiptsWebMVCApp\ReceiptsWebMVCData\obj\Debug\ReceiptsWebMVCData.pdb
+C:\Users\Tono\Desktop\ReceiptsWebMVCApp\ReceiptsWebMVCData\obj\Debug\ReceiptsWebMVCData.csprojResolveAssemblyReference.cache
