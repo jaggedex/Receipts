@@ -3,23 +3,23 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="text-center">РЕЦЕПТИ</h2>
 
-<div>
+<div class="col-md-4 text-center">
 
-@Html.ActionLink("Salads", "ListSalads", "Receipt")
-
-</div>
-
-<div>
-
-    @Html.ActionLink("Meals", "ListMeals", "Receipt")
+@Html.ActionLink("Предястия", "ListSalads", "Receipt")
 
 </div>
 
+<div class="col-md-4 text-center">
 
-<div>
+    @Html.ActionLink("Основни ястия", "ListMeals", "Receipt")
 
-    @Html.ActionLink("Desserts", "ListDesserts", "Receipt")
+</div>
+
+
+<div class="col-md-4 text-center">
+
+    @Html.ActionLink("Десерти", "ListDesserts", "Receipt")
 
 </div>

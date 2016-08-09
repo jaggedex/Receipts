@@ -1,4 +1,5 @@
-﻿using ReceiptsWebMVCData;
+﻿using Microsoft.AspNet.Identity;
+using ReceiptsWebMVCData;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,13 @@ namespace ReceiptsWebMVCApp.Controllers
     {
         
        protected ApplicationDbContext db = new ApplicationDbContext();
+
+        public bool IsAdmin()
+        {
+            var currentUserId = this.User.Identity.GetUserId();
+            var isAdmin = (currentUserId != null && (this.User.IsInRole("Administrator") || this.User.IsInRole("MasterAdministrator")));
+            return isAdmin;
+        }
          
     }
 }

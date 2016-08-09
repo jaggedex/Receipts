@@ -20,5 +20,14 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: 500px;
+    border-radius: 5px;
+}
+#custom-form{
+    width:50%;
+    margin: 0 auto;
+}
+
+.label-create-form {
+    padding-left: 0px;
 }

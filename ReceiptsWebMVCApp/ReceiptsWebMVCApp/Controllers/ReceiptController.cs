@@ -40,7 +40,7 @@ namespace ReceiptsWebMVCApp.Controllers
         
         public ActionResult Create()
         {
-            var product = this.db.Products.Select(ProductViewModel.ViewModel).ToList();
+            var product = this.db.Products.OrderBy(x => x.ProductName).Select(ProductViewModel.ViewModel).ToList();
             var OrderVM = new ReceiptsInputModel();
             OrderVM.Products = product;
             return View(OrderVM);
@@ -75,7 +75,8 @@ namespace ReceiptsWebMVCApp.Controllers
                             this.db.SaveChanges();
                         }
                     }
-                }
+                } 
+                //TODO: Ако модела не е валиден да се даде възможност на юзъра да поправи модела !!!!
                 else if (model.FoodType.ToString() == "Основно ястие")
                 {
                     var e = new Meal()
@@ -136,7 +137,41 @@ namespace ReceiptsWebMVCApp.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public ActionResult Edit(int id, string foodType)
+        {
 
+            var currentUserId = this.User.Identity.GetUserId();
+            var isAdmin = this.IsAdmin();
+        
+            if (foodType == "Предястие")
+            {
+                var recipeToEdit = this.db.Salads.Where(s => s.ID == id).FirstOrDefault(s => s.AuthorId == currentUserId || isAdmin);
+                if (recipeToEdit == null)
+                {
+                   // this.AddNotification("Промяната е невъзможна!", NotificationType.ERROR);
+                }
+            }
+
+            else if (foodType == "Основно ястие")
+            {
+                 var recipeToEdit = this.db.Meals.Where(m => m.ID == id).FirstOrDefault(m => m.AuthorId == currentUserId || isAdmin);
+
+            }
+
+            else if(foodType == "Десерт")
+            {
+                 var recipeToEdit = this.db.Desserts.Where(d => d.ID == id).FirstOrDefault(d => d.AuthorId == currentUserId || isAdmin);
+
+            }
+
+         
+
+
+
+            return View();
+        }
+        [HttpPost]
         public ActionResult Edit()
         {
             return View();
