@@ -92,3 +92,4 @@ D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\PROJECT\Receipts\ReceiptsWebMVCApp\ReceiptsWe
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\PROJECT\Receipts\ReceiptsWebMVCApp\ReceiptsWebMVCData\obj\Debug\ReceiptsWebMVCData.csprojResolveAssemblyReference.cache
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\PROJECT\Receipts\ReceiptsWebMVCApp\ReceiptsWebMVCData\obj\Debug\ReceiptsWebMVCData.dll
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\PROJECT\Receipts\ReceiptsWebMVCApp\ReceiptsWebMVCData\obj\Debug\ReceiptsWebMVCData.pdb
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\PROJECT\ReceiptsWebMVCApp\ReceiptsWebMVCData\obj\Debug\ReceiptsWebMVCData.csprojResolveAssemblyReference.cache

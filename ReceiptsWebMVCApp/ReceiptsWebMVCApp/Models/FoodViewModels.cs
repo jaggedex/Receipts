@@ -19,7 +19,11 @@ namespace ReceiptsWebMVCApp.Models
         public ApplicationUser Author { get; set; }
 
         public DateTime Date { get; set; }
-        
+
+        public string FoodType { get; set; }
+
+
+
         public static Expression<Func<Salad, FoodViewModels>> Salad
         {
             get
@@ -30,7 +34,9 @@ namespace ReceiptsWebMVCApp.Models
                     Title = e.Title,
                     Date = e.Date,
                     Description = e.Description,
-                    Author = e.Author
+                    Author = e.Author,
+                    FoodType = "Предястие"
+                    
                 };
             }
         }
@@ -45,7 +51,8 @@ namespace ReceiptsWebMVCApp.Models
                     Title = e.Title,
                     Date = e.Date,
                     Description = e.Description,
-                    Author = e.Author
+                    Author = e.Author,
+                    FoodType = "Десерт"
                 };
             }
         }
@@ -60,7 +67,8 @@ namespace ReceiptsWebMVCApp.Models
                     Title = e.Title,
                     Date = e.Date,
                     Description = e.Description,
-                    Author = e.Author
+                    Author = e.Author,
+                    FoodType = "Основно ястие"
                 };
             }
         }

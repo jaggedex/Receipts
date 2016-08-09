@@ -18,12 +18,13 @@ namespace ReceiptsWebMVCApp.Controllers
                 .OrderBy(s => s.Rating)
                 .ThenByDescending(e => e.Date)
                 .Select(FoodViewModels.Salad);
+           
             
             var meals = this.db.Meals.OrderBy(s => s.Rating).ThenByDescending(e => e.Date).Select(FoodViewModels.Meal);
             
             var deserts = this.db.Desserts.OrderBy(s => s.Rating).ThenByDescending(e => e.Date).Select(FoodViewModels.Dessert);
-
-
+           
+           
 
             return View(new ReceiptsViewModels { Deserts = deserts, Meals = meals, Salads = salads });
         }

@@ -9,6 +9,8 @@
         <p>
             @item.Title
         </p>
+        @Html.ActionLink("Промени", "Edit","Receipt", new { id = item.Id, foodType = item.FoodType, food = item.FoodType }, null)
+        @Html.ActionLink("Изтрий", "Delete", "Receipt", new { id = item.Id, foodType = item.FoodType }, new { onclick = "return confirm('Сигурни ли сте, че искате да изтриете рецептата?');"})
     </div>
 }
 

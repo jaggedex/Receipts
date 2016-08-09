@@ -8,6 +8,7 @@ using ReceiptsWebMVCApp.Models;
 using System.ComponentModel.DataAnnotations;
 using ReceiptsWebMVCData;
 using Microsoft.AspNet.Identity;
+using ReceiptsWebMVCApp.Extensions;
 
 namespace ReceiptsWebMVCApp.Controllers
 {
@@ -138,48 +139,270 @@ namespace ReceiptsWebMVCApp.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Edit(int id, string foodType)
+        public ActionResult Edit(int id, string foodType, string oldFoodType)
         {
 
             var currentUserId = this.User.Identity.GetUserId();
             var isAdmin = this.IsAdmin();
-        
+            var model = new ReceiptsInputModel();
             if (foodType == "Предястие")
             {
                 var recipeToEdit = this.db.Salads.Where(s => s.ID == id).FirstOrDefault(s => s.AuthorId == currentUserId || isAdmin);
+                var productsTags = this.db.SaladProductTags.Where(p => p.SaladID == id).ToList();
+                var products = this.db.Products.Select(ProductViewModel.ViewModel).ToList();
+                foreach (var product in productsTags)
+                {
+                    foreach (var pr in products)
+                    {
+                        if (product.ID == pr.Id)
+                        {
+                            pr.IsSelected = true;
+                        }
+                    }
+                }
                 if (recipeToEdit == null)
                 {
-                   // this.AddNotification("Промяната е невъзможна!", NotificationType.ERROR);
+                    this.AddNotification("Промяната е невъзможна!", NotificationType.ERROR);
+
+                    return Redirect("~/Home/Index");
+                }
+                else
+                {
+                    model = ReceiptsInputModel.CreateFromSalad(recipeToEdit, products);
+                    
                 }
             }
 
             else if (foodType == "Основно ястие")
             {
-                 var recipeToEdit = this.db.Meals.Where(m => m.ID == id).FirstOrDefault(m => m.AuthorId == currentUserId || isAdmin);
+                var recipeToEdit = this.db.Meals.Where(m => m.ID == id).FirstOrDefault(s => s.AuthorId == currentUserId || isAdmin);
+                var productsTags = this.db.MealProductTags.Where(p => p.MealID == id).ToList();
+                var products = this.db.Products.Select(ProductViewModel.ViewModel).ToList();
+                foreach (var product in productsTags)
+                {
+                    foreach (var pr in products)
+                    {
+                        if (product.ID == pr.Id)
+                        {
+                            pr.IsSelected = true;
+                        }
+                    }
+                }
+                if (recipeToEdit == null)
+                {
+                    this.AddNotification("Промяната е невъзможна!", NotificationType.ERROR);
+
+                    return Redirect("~/Home/Index");
+                }
+                else
+                {
+                    model = ReceiptsInputModel.CreateFromMeal(recipeToEdit, products);
+                    
+                }
 
             }
 
             else if(foodType == "Десерт")
             {
-                 var recipeToEdit = this.db.Desserts.Where(d => d.ID == id).FirstOrDefault(d => d.AuthorId == currentUserId || isAdmin);
+                var recipeToEdit = this.db.Desserts.Where(d => d.ID == id).FirstOrDefault(s => s.AuthorId == currentUserId || isAdmin);
+                var productsTags = this.db.DessertProductTags.Where(p => p.DessertID == id).ToList();
+                var products = this.db.Products.Select(ProductViewModel.ViewModel).ToList();
+                foreach (var product in productsTags)
+                {
+                    foreach (var pr in products)
+                    {
+                        if (product.ID == pr.Id)
+                        {
+                            pr.IsSelected = true;
+                        }
+                    }
+                }
+                if (recipeToEdit == null)
+                {
+                    this.AddNotification("Промяната е невъзможна!", NotificationType.ERROR);
+
+                    return Redirect("~/Home/Index");
+                }
+                else
+                {
+                    model = ReceiptsInputModel.CreateFromDessert(recipeToEdit, products);
+                    
+                }
 
             }
-
-         
-
-
-
-            return View();
+            return View(model);
         }
         [HttpPost]
-        public ActionResult Edit()
+        public ActionResult Edit(int id, ReceiptsInputModel model, string food)
         {
-            return View();
-        }
+            if (food != model.FoodType)
+            {
+                if (food == "Предястие")
+                {
+                    var itemToDelete = this.db.Salads.Find(id);
+                    var b = this.db.SaladProductTags.Where(s => s.SaladID == id).ToList();     
+                    foreach (var item in b)
+                    {
+                        this.db.SaladProductTags.Remove(item);
+                    }
 
-        public ActionResult Delete()
+                    this.db.Salads.Remove(itemToDelete);
+
+                }
+                else if (food == "Основно ястие")
+                {
+                    var itemToDelete = this.db.Meals.Find(id);
+                    var b = this.db.MealProductTags.Where(s => s.MealID == id).ToList();
+                    foreach (var item in b)
+                    {
+                        this.db.MealProductTags.Remove(item);
+                    }
+                    this.db.Meals.Remove(itemToDelete);
+                }
+                else if (food == "Десерт")
+                {
+                    var itemToDelete = this.db.Desserts.Find(id);
+                    var b = this.db.DessertProductTags.Where(s => s.DessertID == id).ToList();
+                    foreach (var item in b)
+                    {
+                        this.db.DessertProductTags.Remove(item);
+                    }
+                    
+                    this.db.Desserts.Remove(itemToDelete);
+                   
+                }
+                this.db.SaveChanges();
+                Create(model);
+
+            }
+            else
+            {
+                if (model.FoodType == "Предястие")
+                {
+                    var e = this.db.Salads.Find(id);
+                    var b = this.db.SaladProductTags.Where(s => s.SaladID == id).ToList();
+                    
+                    e.Title = model.Title;
+                    e.Description = model.Description;
+                    e.Date = DateTime.Now;
+                    for (int i = 0; i < Math.Max(b.Count(), model.Products.Count()); i++)
+                    {
+                        if (i < b.Count)
+                        {
+                            this.db.SaladProductTags.Remove(b[i]);
+                        }
+                        if (model.Products[i].IsSelected)
+                        {
+                            var t = new SaladProductTags()
+                            {
+                                ProductID = model.Products[i].Id,
+                                SaladID = id
+                            };
+                            this.db.SaladProductTags.Add(t);
+                        }
+                    }
+                    this.db.SaveChanges();
+                    
+
+                }
+
+
+                else if (model.FoodType == "Основно ястие")
+                {
+                    var e = this.db.Meals.Find(id);
+                    var b = this.db.MealProductTags.Where(s => s.MealID == id).ToList();
+
+                    e.Title = model.Title;
+                    e.Description = model.Description;
+                    e.Date = DateTime.Now;
+                    for (int i = 0; i < Math.Max(b.Count(), model.Products.Count()); i++)
+                    {
+                        if (i < b.Count)
+                        {
+                            this.db.MealProductTags.Remove(b[i]);
+                        }
+                        if (model.Products[i].IsSelected)
+                        {
+                            var t = new MealProductTags()
+                            {
+                                ProductID = model.Products[i].Id,
+                                MealID = id
+                            };
+                            this.db.MealProductTags.Add(t);
+                        }
+                    }
+                    this.db.SaveChanges();
+                }
+                else if (model.FoodType == "Десерт")
+                {
+                    var e = this.db.Desserts.Find(id);
+                    var b = this.db.DessertProductTags.Where(s => s.DessertID == id).ToList();
+
+                    e.Title = model.Title;
+                    e.Description = model.Description;
+                    e.Date = DateTime.Now;
+                    for (int i = 0; i < Math.Max(b.Count(), model.Products.Count()); i++)
+                    {
+                        if (i < b.Count)
+                        {
+                            this.db.DessertProductTags.Remove(b[i]);
+                        }
+                        
+                        if (model.Products[i].IsSelected)
+                        {
+                            var t = new DessertProductTags()
+                            {
+                                ProductID = model.Products[i].Id,
+                                DessertID = id
+                            };
+                            this.db.DessertProductTags.Add(t);
+                        }
+                    }
+                    this.db.SaveChanges();
+                }
+            }
+           
+            return Redirect("~/Receipt/Index");
+        }
+        
+        public ActionResult Delete(int id, string foodType)
         {
-            return View();
+            if (foodType == "Предястие")
+            {
+                var e = this.db.Salads.Find(id);
+                var b = this.db.SaladProductTags.Where(s => s.SaladID == id).ToList();
+                this.db.Salads.Remove(e);
+                foreach (var item in b)
+                {
+                    this.db.SaladProductTags.Remove(item);
+                }
+                this.db.SaveChanges();
+            }
+
+            if (foodType == "Основно ястие")
+            {
+                var e = this.db.Meals.Find(id);
+                var b = this.db.MealProductTags.Where(s => s.MealID == id).ToList();
+                this.db.Meals.Remove(e);
+                foreach (var item in b)
+                {
+                    this.db.MealProductTags.Remove(item);
+                }
+                this.db.SaveChanges();
+            }
+
+            if (foodType == "Десерт")
+            {
+                var e = this.db.Desserts.Find(id);
+                var b = this.db.DessertProductTags.Where(s => s.DessertID == id).ToList();
+                this.db.Desserts.Remove(e);
+                foreach (var item in b)
+                {
+                    this.db.DessertProductTags.Remove(item);
+                }
+                this.db.SaveChanges();
+            }
+            return Redirect("~/Home/Index");
         }
     }
 }

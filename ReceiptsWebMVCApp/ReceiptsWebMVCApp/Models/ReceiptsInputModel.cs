@@ -28,6 +28,40 @@ namespace ReceiptsWebMVCApp.Models
         [Required(ErrorMessage = "This can't be empty!")]
         [Display(Name = "Категория")]
         public string FoodType { get; set; }
-        
+
+        public static ReceiptsInputModel CreateFromSalad(Salad s, List<ProductViewModel> p)
+        {
+            return new ReceiptsInputModel()
+            {
+                Title = s.Title,
+                Products = p,
+                Description = s.Description
+
+                
+            };
+        }
+
+        public static ReceiptsInputModel CreateFromMeal(Meal m, List<ProductViewModel> p)
+        {
+            return new ReceiptsInputModel()
+            {
+                Title = m.Title,
+                Products = p,
+                Description = m.Description
+
+            };
+        }
+
+        public static ReceiptsInputModel CreateFromDessert(Dessert d, List<ProductViewModel> p)
+        {
+            return new ReceiptsInputModel()
+            {
+                Title = d.Title,
+                Products = p,
+                Description = d.Description
+
+            };
+        }
+
     }
 }
