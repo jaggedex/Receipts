@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesWebApp", "RecipesWebApp\RecipesWebApp.csproj", "{7B5FCA6D-F397-489F-A673-C2EC90868CCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesWebData", "ClassLibrary2\RecipesWebData.csproj", "{CF009BB7-66F8-45BC-BA9B-81ADA662B924}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B5FCA6D-F397-489F-A673-C2EC90868CCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5FCA6D-F397-489F-A673-C2EC90868CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5FCA6D-F397-489F-A673-C2EC90868CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5FCA6D-F397-489F-A673-C2EC90868CCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF009BB7-66F8-45BC-BA9B-81ADA662B924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF009BB7-66F8-45BC-BA9B-81ADA662B924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF009BB7-66F8-45BC-BA9B-81ADA662B924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF009BB7-66F8-45BC-BA9B-81ADA662B924}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

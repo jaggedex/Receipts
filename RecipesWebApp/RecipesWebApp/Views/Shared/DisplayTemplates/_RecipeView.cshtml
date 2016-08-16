@@ -1,0 +1,20 @@
+﻿
+@using RecipesWebData
+
+@model IEnumerable<Recipe>
+@{
+    ViewBag.Title = "ReceiptsView";
+}
+
+@foreach (var item in Model)
+{
+    <div class="well">
+        <p>
+            @Html.ActionLink(item.Title, "Details", "Receipt", new { id = item.ID}, null)
+        </p>
+
+        @Html.ActionLink("Промени", "Edit", "Receipt", new { id = item.ID, oldFoodType = item.Type }, null)
+        @Html.ActionLink("Изтрий", "Delete", "Receipt", new { id = item.ID }, new { onclick = "return confirm('Сигурни ли сте, че искате да изтриете рецептата?');" })
+    </div>
+}
+
