@@ -64,6 +64,7 @@ namespace RecipesWebApp.Models
 
     public class RegisterViewModel
     {
+     
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
@@ -79,6 +80,11 @@ namespace RecipesWebApp.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        //[StringLength(200)]
+        //[Display(Name = "FullName")]
+        //public string FullName { get; set; }
+
     }
 
     public class ResetPasswordViewModel

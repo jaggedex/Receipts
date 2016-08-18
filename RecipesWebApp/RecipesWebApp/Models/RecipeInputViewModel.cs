@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Web;
 using System.Web.Mvc;
 
@@ -17,10 +18,14 @@ namespace RecipesWebApp.Models
         [Display(Name = "Заглавие")]
         public string Title { get; set; }
 
+        public string AuthorId { get; set; }
+
 
         //[Required(ErrorMessage = "Products can't be empty!")]
         [Display(Name = "Необходими продукти")]
-        public virtual List<SelectListItem> Products { get; set; }
+        public  List<SelectListItem> SelectProducts { get; set; }
+        [Display(Name = "Необходими продукти")]
+        public  ICollection<Product> Products { get; set; }
 
         [Required(ErrorMessage = "Description can't be empty!")]
         [Display(Name = "Начин на приготвяне")]
@@ -38,20 +43,23 @@ namespace RecipesWebApp.Models
         public bool IsVoted { get; set; }
 
 
-        public static RecipeInputViewModel CreateFromRecipe(Recipe s, List<SelectListItem> p)
+        public static Expression<Func<Recipe, RecipeInputViewModel>> ViewModel
         {
-            return new RecipeInputViewModel()
+            get
             {
-                Id = s.ID,
-                Title = s.Title,
-                Products = p,
-                Description = s.Description,
-                Date = s.Date,
-                Type = s.Type
+                return e => new RecipeInputViewModel()
+                {
+                    Id = e.ID,
+                    Title = e.Title,
+                    Date = e.Date,
+                    Description = e.Description,
+                    Type = e.Type,
+                    Products = e.Products,
+                    AuthorId = e.AuthorId
+                    
 
-
-
-            };
+                };
+            }
         }
 
     }

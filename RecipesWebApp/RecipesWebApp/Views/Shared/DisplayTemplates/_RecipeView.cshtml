@@ -10,11 +10,19 @@
 {
     <div class="well">
         <p>
-            @Html.ActionLink(item.Title, "Details", "Receipt", new { id = item.ID}, null)
-        </p>
+            @*@foreach (var pr in item.Products)
+            {
+                <text>@pr.ProductName</text>
+            }*@
+            @Html.ActionLink(item.Title, "Details", "Recipe", new { id = item.ID}, null)
+            @*//TODO a little part of description !*@
 
-        @Html.ActionLink("Промени", "Edit", "Receipt", new { id = item.ID, oldFoodType = item.Type }, null)
-        @Html.ActionLink("Изтрий", "Delete", "Receipt", new { id = item.ID }, new { onclick = "return confirm('Сигурни ли сте, че искате да изтриете рецептата?');" })
+        </p>
+        
+
+        @Html.ActionLink("Промени", "Edit", "Recipe", new { id = item.ID, oldFoodType = item.Type }, null)
+
+        @Html.ActionLink("Изтрий", "Delete", "Recipe", new { id = item.ID }, new { onclick = "return confirm('Сигурни ли сте, че искате да изтриете рецептата?');" })
     </div>
 }
 
