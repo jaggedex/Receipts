@@ -142,3 +142,7 @@ D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\MYTRY\RecipesWebApp\RecipesWebApp\obj\Debug\R
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\MYTRY\RecipesWebApp\RecipesWebApp\obj\Debug\RecipesWebApp.pdb
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\MYTRY\RecipesWebApp\RecipesWebApp\bin\RecipeWebData.dll
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\MYTRY\RecipesWebApp\RecipesWebApp\bin\RecipeWebData.pdb
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\MYTRY\RecipesWebApp\RecipesWebApp\bin\PagedList.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\MYTRY\RecipesWebApp\RecipesWebApp\bin\PagedList.Mvc.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\MYTRY\RecipesWebApp\RecipesWebApp\bin\PagedList.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\MYTRY\RecipesWebApp\RecipesWebApp\bin\PagedList.Mvc.xml

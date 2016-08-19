@@ -22,3 +22,8 @@ select,
 textarea {
     max-width: 280px;
 }
+
+hr {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}

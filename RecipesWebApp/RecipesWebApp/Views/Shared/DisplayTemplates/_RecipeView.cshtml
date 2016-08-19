@@ -10,27 +10,34 @@
 {
     <div class="well">
         <p>
-            
+
             @Html.ActionLink(item.Title, "Details", "Recipe", new { id = item.ID }, null)
             <div>
                 @{var TotalVotedSum = 0D;
-                foreach (var itm in item.Ratings)
-                {
-                    TotalVotedSum += itm.Vote;
-                }
-                var vote = Math.Round(TotalVotedSum / item.Ratings.Count(), 1);
-                    <text>Оценка: @vote<span>/5</span></text>
+                    foreach (var itm in item.Ratings)
+                    {
+                        TotalVotedSum += itm.Vote;
+                    }
+                    var vote = Math.Round(TotalVotedSum / item.Ratings.Count(), 1);
+
+                    if (TotalVotedSum != 0D)
+                    {
+                        <text>Оценка: @vote<span>/5</span></text>
+                    }
+                    else
+                    {
+                        <text>Оценка: 0/5</text>
+                    }
                 }
             </div>
-            
+
             @*//TODO a little part of description !*@
 
         </p>
-        
+
 
         @Html.ActionLink("Промени", "Edit", "Recipe", new { id = item.ID, oldFoodType = item.Type }, null)
 
         @Html.ActionLink("Изтрий", "Delete", "Recipe", new { id = item.ID }, new { onclick = "return confirm('Сигурни ли сте, че искате да изтриете рецептата?');" })
     </div>
-}
-
+                    }

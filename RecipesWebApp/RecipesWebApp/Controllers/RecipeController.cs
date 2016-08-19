@@ -10,6 +10,8 @@ using Microsoft.AspNet.Identity;
 using System.Net;
 using RecipesWebApp.Extensions;
 using RecipeWebData;
+using PagedList;
+using PagedList.Mvc;
 
 namespace RecipesWebApp.Controllers
 {
@@ -21,22 +23,22 @@ namespace RecipesWebApp.Controllers
             return View();
         }
 
-        public ActionResult ListAppetizers()
+        public ActionResult ListAppetizers(int? page)
         {
-            var appetizers = this.db.Recipes.Where(a => a.Type == "Предястие").ToList();
+            var appetizers = this.db.Recipes.Where(a => a.Type == "Предястие").ToList().ToPagedList(page ?? 1, 3);
             return View(appetizers);
 
         }
 
-        public ActionResult ListMainDishes()
+        public ActionResult ListMainDishes(int? page)
         {
-            var mainDishes = this.db.Recipes.Where(a => a.Type == "Основно ястие").ToList();
+            var mainDishes = this.db.Recipes.Where(a => a.Type == "Основно ястие").ToList().ToPagedList(page ?? 1, 3);
             return View(mainDishes);
         }
 
-        public ActionResult ListDesserts()
+        public ActionResult ListDesserts(int? page)
         {
-            var desserts = this.db.Recipes.Where(a => a.Type == "Десерт").ToList();
+            var desserts = this.db.Recipes.Where(a => a.Type == "Десерт").ToList().ToPagedList(page ?? 1, 3);
             return View(desserts);
         }
         public ActionResult Create()
