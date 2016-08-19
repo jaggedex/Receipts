@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using RecipeWebData;
 
 namespace RecipesWebData
 
@@ -19,7 +20,7 @@ namespace RecipesWebData
 
         public IDbSet<Comment> Comments { get; set; }
 
-
+        public IDbSet<Rating> Ratings { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

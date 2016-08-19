@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Migrations\DbMigrationsConfig.cs" />
+    <Compile Include="Rating.cs" />
     <Compile Include="Recipe.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Comment.cs" />

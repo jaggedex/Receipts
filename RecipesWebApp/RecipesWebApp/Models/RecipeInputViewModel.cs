@@ -1,4 +1,5 @@
 ﻿using RecipesWebData;
+using RecipeWebData;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -19,7 +20,8 @@ namespace RecipesWebApp.Models
         public string Title { get; set; }
 
         public string AuthorId { get; set; }
-
+        [Display(Name = "Автор")]
+        public string User { get; set; }
 
         //[Required(ErrorMessage = "Products can't be empty!")]
         [Display(Name = "Необходими продукти")]
@@ -36,12 +38,17 @@ namespace RecipesWebApp.Models
         public string Type { get; set; }
 
         public DateTime Date { get; set; }
-
+        
         [Display(Name = "Оценка")]
         public int Rating { get; set; }
 
-        public bool IsVoted { get; set; }
+        public string CurrentUserId { get; set; }
 
+        public ICollection<Comment> Comments { get; set; }
+
+        public ICollection<Rating> Ratings { get; set; }
+
+        public PaginationViewModel Pagination { get; set; }
 
         public static Expression<Func<Recipe, RecipeInputViewModel>> ViewModel
         {
@@ -55,8 +62,9 @@ namespace RecipesWebApp.Models
                     Description = e.Description,
                     Type = e.Type,
                     Products = e.Products,
-                    AuthorId = e.AuthorId
-                    
+                    AuthorId = e.AuthorId, 
+                    Ratings = e.Ratings,
+                    Comments = e.Comments
 
                 };
             }

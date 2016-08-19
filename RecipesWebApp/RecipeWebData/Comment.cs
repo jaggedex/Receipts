@@ -9,12 +9,18 @@ namespace RecipesWebData
 {
     public class Comment
     {
+        public Comment()
+        {
+            this.Date = DateTime.Now;
+        }
         [Key]
         public int ID { get; set; }
 
         public string Text { get; set; }
+        public DateTime Date { get; set; }
 
-        public ApplicationUser Author { get; set; }
+        public string AuthorName { get; set; }
+        public string AuthorId { get; set; }
 
     }
 }

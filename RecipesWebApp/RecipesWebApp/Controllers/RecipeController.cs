@@ -9,6 +9,7 @@ using RecipesWebData;
 using Microsoft.AspNet.Identity;
 using System.Net;
 using RecipesWebApp.Extensions;
+using RecipeWebData;
 
 namespace RecipesWebApp.Controllers
 {
@@ -81,9 +82,28 @@ namespace RecipesWebApp.Controllers
         public ActionResult Details(int id)
         {
             var recipe = this.db.Recipes.Where(x => x.ID == id).Select(RecipeInputViewModel.ViewModel).ToList();
+            recipe[0].CurrentUserId = this.User.Identity.GetUserId();
+            recipe[0].User = this.User.Identity.GetUserName();
+
             return View(recipe[0]);
         }
+        [HttpPost]
+        public ActionResult Details(RecipeInputViewModel model)
+        {
+            var rating = new Rating()
+            {
+                Vote = model.Rating,
+                AuthorId = this.User.Identity.GetUserId()
+            };
+            this.db.SaveChanges();
 
+            var recipe = this.db.Recipes.Find(model.Id);
+
+            recipe.Ratings.Add(rating);
+            this.db.SaveChanges();
+
+            return Redirect("/Recipe/Details/" + model.Id);
+        }
         public ActionResult Delete(int id)
         {
             var recipeToDelete = this.db.Recipes.Find(id);
@@ -163,5 +183,28 @@ namespace RecipesWebApp.Controllers
 
             return Redirect("/Recipe/Index");
         }
+        public ActionResult AddComment()
+        {
+            return PartialView("_ShowComments");
+        }
+
+        [HttpPost]
+        public ActionResult AddComment(string CommentText, int id)
+        {
+            var newComment = new Comment()
+            {
+                Text = CommentText,
+                AuthorId = this.User.Identity.GetUserId()
+            };
+            this.db.SaveChanges();
+
+            var recipeToAddComment = this.db.Recipes.Find(id);
+            recipeToAddComment.Comments.Add(newComment);
+            this.db.SaveChanges();
+
+            return Redirect("/Recipe/Details/" + id);
+        }
+
+
     }
 }

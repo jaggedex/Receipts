@@ -10,11 +10,19 @@
 {
     <div class="well">
         <p>
-            @*@foreach (var pr in item.Products)
-            {
-                <text>@pr.ProductName</text>
-            }*@
-            @Html.ActionLink(item.Title, "Details", "Recipe", new { id = item.ID}, null)
+            
+            @Html.ActionLink(item.Title, "Details", "Recipe", new { id = item.ID }, null)
+            <div>
+                @{var TotalVotedSum = 0D;
+                foreach (var itm in item.Ratings)
+                {
+                    TotalVotedSum += itm.Vote;
+                }
+                var vote = Math.Round(TotalVotedSum / item.Ratings.Count(), 1);
+                    <text>Оценка: @vote<span>/5</span></text>
+                }
+            </div>
+            
             @*//TODO a little part of description !*@
 
         </p>

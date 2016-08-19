@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RecipeWebData;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -39,5 +40,7 @@ namespace RecipesWebData
         public virtual ICollection<Product> Products { get; set; }
 
         public virtual ICollection<Comment> Comments { get; set; }
+
+        public virtual ICollection<Rating> Ratings { get; set; }
     }
 }
