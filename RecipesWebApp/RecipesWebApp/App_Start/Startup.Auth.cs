@@ -64,6 +64,10 @@ namespace RecipesWebApp
             //    ClientId = "",
             //    ClientSecret = ""
             //});
+
+
+            // Enable Facebook External Login OAuth
+            app.UseFacebookAuthentication("553083391545271", "d0cec47bee3f4f23e02c2115cb47e920");
         }
     }
 }

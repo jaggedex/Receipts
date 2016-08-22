@@ -1,0 +1,5 @@
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\MYTRY\RecipesWebApp\RecipeWebData\bin\Debug\RecipeWebData.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\MYTRY\RecipesWebApp\RecipeWebData\bin\Debug\RecipeWebData.pdb
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\MYTRY\RecipesWebApp\RecipeWebData\obj\Debug\RecipeWebData.csprojResolveAssemblyReference.cache
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\MYTRY\RecipesWebApp\RecipeWebData\obj\Debug\RecipeWebData.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\MYTRY\RecipesWebApp\RecipeWebData\obj\Debug\RecipeWebData.pdb

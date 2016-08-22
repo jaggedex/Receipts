@@ -27,3 +27,18 @@ hr {
     margin-top: 2px;
     margin-bottom: 2px;
 }
+
+.category-type {
+    border-radius:5px;
+    text-decoration: none;
+    border: 1px solid #3c2a2a;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+.recipes-search {
+    float:right;
+}

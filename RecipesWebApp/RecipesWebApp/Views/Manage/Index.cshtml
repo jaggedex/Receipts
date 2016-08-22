@@ -1,6 +1,6 @@
 ﻿@model RecipesWebApp.Models.IndexViewModel
 @{
-    ViewBag.Title = "Manage";
+    ViewBag.Title = "Управление";
 }
 
 <h2>@ViewBag.Title.</h2>
@@ -15,7 +15,7 @@
             [
             @if (Model.HasPassword)
             {
-                @Html.ActionLink("Change your password", "ChangePassword")
+                @Html.ActionLink("Смяна на парола", "ChangePassword")
             }
             else
             {

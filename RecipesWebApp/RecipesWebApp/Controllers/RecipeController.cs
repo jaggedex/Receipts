@@ -25,25 +25,26 @@ namespace RecipesWebApp.Controllers
 
         public ActionResult ListAppetizers(int? page)
         {
-            var appetizers = this.db.Recipes.Where(a => a.Type == "Предястие").ToList().ToPagedList(page ?? 1, 3);
+            var appetizers = this.db.Recipes.Where(a => a.Type == "Предястие").OrderByDescending(x => x.Date).ToList().ToPagedList(page ?? 1, 5);
             return View(appetizers);
 
         }
 
         public ActionResult ListMainDishes(int? page)
         {
-            var mainDishes = this.db.Recipes.Where(a => a.Type == "Основно ястие").ToList().ToPagedList(page ?? 1, 3);
+            var mainDishes = this.db.Recipes.Where(a => a.Type == "Основно ястие").OrderByDescending(x=>x.Date).ToList().ToPagedList(page ?? 1, 5);
             return View(mainDishes);
         }
 
         public ActionResult ListDesserts(int? page)
         {
-            var desserts = this.db.Recipes.Where(a => a.Type == "Десерт").ToList().ToPagedList(page ?? 1, 3);
+            var desserts = this.db.Recipes.Where(a => a.Type == "Десерт").OrderByDescending(x => x.Date).ToList().ToPagedList(page ?? 1, 5);
             return View(desserts);
         }
+        [Authorize]
         public ActionResult Create()
         {
-            var products = this.db.Products.Select(p => new SelectListItem() {
+            var products = this.db.Products.OrderBy(x => x.ProductName).Select(p => new SelectListItem() {
                 Text = p.ProductName,
                 Value = p.ID.ToString(),
                 Selected = false
@@ -52,7 +53,10 @@ namespace RecipesWebApp.Controllers
 
             return View(new RecipeInputViewModel { SelectProducts = products });
         }
+
+        [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(RecipeInputViewModel model)
         {
             if (model != null && this.ModelState.IsValid)
@@ -67,7 +71,7 @@ namespace RecipesWebApp.Controllers
                     }
                 }
                 // TODO ДА СЕ СЪЗДАВА В МЕЖДИННА ТАБЛИЦА ОТ КОЯТО АДМИНА ДА ГИ ПРЕХВЪРЛЯ !!!!
-                var a = new Recipe()
+                var newRecipe = new Recipe()
                 {
                     AuthorId = this.User.Identity.GetUserId(),
                     Title = model.Title,
@@ -75,21 +79,33 @@ namespace RecipesWebApp.Controllers
                     Type = model.Type,
                     Products = selectedProducts
                 };
-                this.db.Recipes.Add(a);
+                this.db.Recipes.Add(newRecipe);
                 this.db.SaveChanges();
-
+                this.AddNotification("Добавихте успешно нова рецепта.", NotificationType.SUCCESS);
+                switch (model.Type)
+                {
+                    case "Предястие":
+                        return Redirect("~/Recipe/ListAppetizers");
+                    case "Основно ястие":
+                        return Redirect("~/Recipe/ListMainDishes");
+                    case "Десерт":
+                        return Redirect("~/Recipe/ListDesserts");
+                }
             }
-            return Redirect("~/Recipe/");
+            return View(model);
         }
         public ActionResult Details(int id)
         {
-            var recipe = this.db.Recipes.Where(x => x.ID == id).Select(RecipeInputViewModel.ViewModel).ToList();
-            recipe[0].CurrentUserId = this.User.Identity.GetUserId();
-            recipe[0].User = this.User.Identity.GetUserName();
+            var recipe = this.db.Recipes.Where(x => x.ID == id).Select(RecipeInputViewModel.ViewModel).FirstOrDefault();
+            recipe.CurrentUserId = this.User.Identity.GetUserId();
+            recipe.User = this.User.Identity.GetUserName();
 
-            return View(recipe[0]);
+            return View(recipe);
         }
+
+        [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Details(RecipeInputViewModel model)
         {
             var rating = new Rating()
@@ -103,9 +119,11 @@ namespace RecipesWebApp.Controllers
 
             recipe.Ratings.Add(rating);
             this.db.SaveChanges();
-
+            this.AddNotification("Вие оценихте рецептата успешно.", NotificationType.SUCCESS);
             return Redirect("/Recipe/Details/" + model.Id);
         }
+
+        [Authorize]
         public ActionResult Delete(int id)
         {
             var recipeToDelete = this.db.Recipes.Find(id);
@@ -123,18 +141,19 @@ namespace RecipesWebApp.Controllers
             }
             return Redirect("/Recipe/Index");
         }
-
+        [Authorize]
         public ActionResult Edit(int id)
         {
             var currentUserId = this.User.Identity.GetUserId();
             var recipeToEdit = this.db.Recipes.Where(recipe => recipe.ID == id).Select(RecipeInputViewModel.ViewModel).FirstOrDefault();
 
-            var products = this.db.Products.Select(p => new SelectListItem()
+            var products = this.db.Products.OrderBy(x => x.ProductName).Select(p => new SelectListItem()
             {
                 Text = p.ProductName,
                 Value = p.ID.ToString(),
                 Selected = false
             }).ToList();
+
             foreach (var product in recipeToEdit.Products)
             {
                 foreach (var pr in products)
@@ -159,8 +178,10 @@ namespace RecipesWebApp.Controllers
 
             }
         }
+        [Authorize]
         [HttpPost]
-        public ActionResult Edit(RecipeInputViewModel model)
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(/*[Bind(Include ="Products,SelectProducts,Title,Description,Type,Date,AuthorId")]*/RecipeInputViewModel model)
         {
             var editedRecipe = this.db.Recipes.Find(model.Id);
 
@@ -182,28 +203,32 @@ namespace RecipesWebApp.Controllers
             editedRecipe.AuthorId = this.User.Identity.GetUserId();
 
             this.db.SaveChanges();
-
-            return Redirect("/Recipe/Index");
+            this.AddNotification("Вие променихте успешно вашата рецепта.", NotificationType.SUCCESS);
+            
+            return Redirect("/Recipe/Details/" + model.Id);
         }
+        [Authorize]
         public ActionResult AddComment()
         {
             return PartialView("_ShowComments");
         }
 
+        [Authorize]
         [HttpPost]
         public ActionResult AddComment(string CommentText, int id)
         {
             var newComment = new Comment()
             {
                 Text = CommentText,
-                AuthorId = this.User.Identity.GetUserId()
+                AuthorId = this.User.Identity.GetUserId(),
+                AuthorName = this.User.Identity.GetUserName()
             };
             this.db.SaveChanges();
 
             var recipeToAddComment = this.db.Recipes.Find(id);
             recipeToAddComment.Comments.Add(newComment);
             this.db.SaveChanges();
-
+            this.AddNotification("Коментарът ви е добавен успешно.", NotificationType.SUCCESS);
             return Redirect("/Recipe/Details/" + id);
         }
 

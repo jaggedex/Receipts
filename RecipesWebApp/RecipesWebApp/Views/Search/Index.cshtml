@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "ТЪРСЕНЕ";
+}
+
+<h2 class="text-center">ТЪРСЕНЕ</h2>
+
+<div class="col-md-12 text-center">
+
+
+    @Html.ActionLink("Предястия", "Search", "Search", new { type = "Предястие" }, null)
+
+</div>
+
+<div class="col-md-12 text-center">
+
+    @Html.ActionLink("Основни ястия", "Search", "Search", new { type = "Основно ястие" }, null)
+
+</div>
+
+<div class="col-md-12 text-center">
+
+    @Html.ActionLink("Десерт", "Search", "Search", new { type = "Десерт" }, null)
+
+</div>

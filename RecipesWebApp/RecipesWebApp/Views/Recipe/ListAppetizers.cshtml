@@ -7,6 +7,11 @@
 }
 
 <h2>Предястия</h2>
-
+@*<div class="visible-md>
+    <div class="recipes-search">
+        <input type="text" name="keyword" required value="@ViewBag.Keyword" />
+        <input type="submit" value="Търси" />
+    </div>
+</div>*@
 @Html.DisplayFor(d => d, "_RecipeView")
-@Html.PagedListPager(Model, page => Url.Action("ListAppetizers", new { page }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded , DisplayPageCountAndCurrentLocation = true, DisplayItemSliceAndTotal = true })
+@Html.PagedListPager(Model, page => Url.Action("ListAppetizers", new { page }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true, DisplayItemSliceAndTotal = true })

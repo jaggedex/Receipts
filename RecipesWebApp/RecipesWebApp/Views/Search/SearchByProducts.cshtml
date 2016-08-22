@@ -1,0 +1,33 @@
+﻿@using RecipesWebApp.Models
+@model SearchViewModel
+@{
+    ViewBag.Title = "Search By One Product";
+}
+
+<h2>Рецепти с пълно съвпадение на избраните от вас продукти:</h2>
+<div>
+    @if (Model.MatchedByAll.Count() != 0)
+    {
+        @Html.DisplayFor(x => x.MatchedByAll)
+    }
+    else
+    {
+         <text> Няма намерени рецепти </text>
+    }
+
+</div>
+<br />
+<hr />
+<br />
+<h2>Рецепти с един липсващ продукт на избраните от вас:</h2>
+<div>
+    @if (Model.MatchedWithoutOne.Count() != 0)
+    {
+        @Html.DisplayFor(x => x.MatchedWithoutOne)
+    }
+    else
+    {
+        <text> Няма намерени рецепти </text>
+    }
+
+</div>

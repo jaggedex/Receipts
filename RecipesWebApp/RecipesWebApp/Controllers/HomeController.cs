@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace RecipesWebApp.Controllers
 {
+    [RequireHttps]
     public class HomeController : BaseController
     {
         public ActionResult Index()

@@ -7,7 +7,8 @@
 <h2 class="text-center">ДОБАВИ РЕЦЕПТА</h2>
 @using (Html.BeginForm())
 {
-    @Html.AntiForgeryToken()
+   @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
 
     <div class="form-horizontal">
         <div id="custom-form">
@@ -16,25 +17,25 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2 label-create-form", @style = "display: inline-block; text-align: right" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control", @style = "width: 500px" } })
+                    @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control input-lg", @style = "width: 500px" } })
                     @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
                 </div>
             </div>
             <div class="form-group">
                 @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2 label-create-form", @style = "display: inline-block; text-align: right" })
                 <div class="col-md-10">
-                    @Html.TextAreaFor(model => model.Description, 10, 80, new { htmlAttributes = new { @class = "form-control", @style = "width: 500px" } })
+                    @Html.TextAreaFor(model => model.Description, 10, 80, new { htmlAttributes = new { @class = "form-control input-lg", @style = "width: 500px" } })
                     @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
                 </div>
             </div>
             <div class="form-group">
                 @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2 label-create-form", @style = "display: inline-block; text-align: right" })
-                <div class="col-md-10">
+                <div class="col-md-6">
                     @Html.DropDownListFor(model => model.Type,
                             new List<SelectListItem> {
                                 new SelectListItem {Text = "Предястие", Value="Предястие" },
                                 new SelectListItem {Text = "Основно ястие", Value="Основно ястие" },
-                                new SelectListItem {Text = "Десерт", Value="Десерт" } }, "--Избери категория--", new { htmlAttributes = new { @class = "form-control" } })
+                                new SelectListItem {Text = "Десерт", Value="Десерт" } }, "--Избери категория--", new { htmlAttributes = new { @class = "form-control input-lg" } })
                     @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger", @style = "width: 500px" })
                 </div>
             </div>

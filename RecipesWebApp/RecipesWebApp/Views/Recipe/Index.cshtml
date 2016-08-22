@@ -5,21 +5,43 @@
 
 <h2 class="text-center">РЕЦЕПТИ</h2>
 
-<div class="col-md-4 text-center">
+<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 text-center category-type">
 
-    @Html.ActionLink("Предястия", "ListAppetizers", "Recipe")
+    <a href='@Url.Action("ListAppetizers", "Recipe")'>
+        <div>
+            @*<text style="font-size:xx-large; text-decoration:none; color:burlywood ">Предястия</text>*@
+            <img src='@Url.Content("~/Images/appetizers-recipes.jpg" )' class="img-responsive"/>
+        </div>
+    </a>
+
+    @*@Html.ActionLink("Предястия", "ListAppetizers", "Recipe")*@
+
 
 </div>
 
-<div class="col-md-4 text-center">
+<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 text-center category-type">
 
-    @Html.ActionLink("Основни ястия", "ListMainDishes", "Recipe")
+    <a href='@Url.Action("ListMainDishes", "Recipe")'>
+        <div>
+            @*<text style="font-size:xx-large; text-decoration:none; color:burlywood ">Основни ястия</text>*@
+            <img src='@Url.Content("~/Images/maindishes-recipes.jpg")' class="img-responsive" />
+        </div>
+    </a>
+
+    @*@Html.ActionLink("Основни ястия", "ListMainDishes", "Recipe")*@
 
 </div>
 
 
-<div class="col-md-4 text-center">
+<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 text-center category-type">
 
-    @Html.ActionLink("Десерти", "ListDesserts", "Recipe")
+    <a href='@Url.Action("ListDesserts", "Recipe")'>
+        <div>
+            @*<text style="font-size:xx-large; text-decoration:none; color:burlywood ">Десерти</text>*@
+            <img src='@Url.Content("~/Images/desserts-recipes.jpg")' class="img-responsive" />
+        </div>
+    </a>
+
+    @*@Html.ActionLink("Десерти", "ListDesserts", "Recipe")*@
 
 </div>

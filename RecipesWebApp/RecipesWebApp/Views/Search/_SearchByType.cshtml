@@ -1,0 +1,20 @@
+﻿<div id="0">
+    @Ajax.ActionLink("Търси по продукти", "SearchByProducts", "Search", new { type = Model }, new AjaxOptions
+{
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "0"
+}, new { @class = "btn btn-default" })
+</div>
+
+<div id="1">
+    @Ajax.ActionLink("Търси по основен продукт", "SearchByMainProduct", "Search", new { type = Model }, new AjaxOptions
+{
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "1"
+}, new { @class = "btn btn-default" })
+</div>
+
+
+
+
+

@@ -14,29 +14,33 @@ namespace RecipesWebApp.Models
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Title can't be empty!")]
-        [StringLength(100, ErrorMessage = "The {0} must be between {2} and {1} characters long.", MinimumLength = 1)]
+        [Required(ErrorMessage = "Полето със заглавие не може да бъде празно")]
+        [StringLength(100, ErrorMessage = "Заглавието {0} трябва да бъде дълго между {2} у {1} символа.", MinimumLength = 4)]
         [Display(Name = "Заглавие")]
         public string Title { get; set; }
 
         public string AuthorId { get; set; }
+
         [Display(Name = "Автор")]
         public string User { get; set; }
 
         //[Required(ErrorMessage = "Products can't be empty!")]
         [Display(Name = "Необходими продукти")]
         public  List<SelectListItem> SelectProducts { get; set; }
+
         [Display(Name = "Необходими продукти")]
         public  ICollection<Product> Products { get; set; }
 
-        [Required(ErrorMessage = "Description can't be empty!")]
+
+        [Required(ErrorMessage = "Описанието не може да бъде празно!")]
+        [StringLength(2000, ErrorMessage = "Описанието на рецептата трябва да съдържа поне 10 символа.", MinimumLength = 10)]
         [Display(Name = "Начин на приготвяне")]
         public string Description { get; set; }
 
-        [Required(ErrorMessage = "This can't be empty!")]
+        [Required(ErrorMessage = "Типа на ястието не може да бъде празно")]
         [Display(Name = "Категория")]
         public string Type { get; set; }
-
+        [Display(Name = "Добавена на")]
         public DateTime Date { get; set; }
         
         [Display(Name = "Оценка")]

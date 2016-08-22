@@ -1,0 +1,156 @@
+﻿@model RecipesWebApp.Models.RecipeInputViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FoodViewModels</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Products)
+        </dt>
+
+        <dd>
+            @{
+                var products = new List<string>();
+                foreach (var item in Model.Products)
+                {
+                    products.Add(item.ProductName);
+                }
+                products.Sort();
+            }
+            @string.Join(", ", products)
+
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(x => x.Rating)
+        </dt>
+        <dd>
+            @{
+                bool isAuthor = false;
+            }
+            @foreach (var item in Model.Ratings)
+            {
+                if (item.AuthorId == Model.CurrentUserId)
+                {
+                    isAuthor = true;
+                    break;
+                }
+            }
+            @if (!isAuthor && Model.CurrentUserId != null)
+            {
+                using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="col-md-3" style="padding-left: 0px">
+                        <div class="col-md-8" style="padding-left: 0px">
+                            @Html.DropDownListFor(model => model.Rating,
+                             new List<SelectListItem> {
+                                new SelectListItem {Text = "Отлично", Value="5" },
+                                new SelectListItem {Text = "Добро", Value="4" },
+                                new SelectListItem {Text = "Средно", Value="3" },
+                                new SelectListItem {Text = "Слабо", Value="2" },
+                                new SelectListItem {Text = "Много слабо", Value="1" }},
+                             "--Избери оценка--", new { htmlAttributes = new { @class = "form-control", @style = "padding-left: 0px" } })
+                            @Html.ValidationMessageFor(model => model.Rating, "", new { @class = "text-danger", @style = "width: 500px" })
+                        </div>
+
+                        <div class="form-group col-md-offset-1 col-md-3">
+                            <input type="submit" value="Оцени" class="btn btn-default" />
+                        </div>
+                    </div>
+
+                }
+            }
+            else
+            {
+                var TotalVotedSum = 0D;
+                foreach (var item in Model.Ratings)
+                {
+                    TotalVotedSum += item.Vote;
+                }
+                var vote = Math.Round(TotalVotedSum / Model.Ratings.Count(), 1);
+                if (TotalVotedSum != 0D)
+                {
+                    <text>@vote<span>/5</span></text>
+                }
+                else
+                {
+                    <text>0/5</text>
+                }
+
+            }
+        </dd>
+
+    </dl>
+</div>
+    <div class="coll-md-12">
+        @foreach (var comment in Model.Comments)
+        {
+           
+            <div class="col-md-12" style="border: 1px solid black; margin: 10px;">
+                @comment.Text
+                <hr />
+                <span class="pull-left">@comment.Date</span>
+                <span class="pull-right">Автор: @comment.AuthorName</span>
+            </div>
+            <br />
+        }
+        
+    </div>
+<div>
+    <div id="comment">
+        @Ajax.ActionLink("Добави коментар", "AddComment", "Recipe", new { id = Model.Id }, new AjaxOptions
+   {
+       InsertionMode = InsertionMode.Replace,
+       UpdateTargetId = "comment"
+   }, new { @class = "btn btn-default" })
+    </div>
+
+</div>
+
+<p>
+
+    @Html.ActionLink("Обратно в предястия", "ListAppetizers")
+</p>
+

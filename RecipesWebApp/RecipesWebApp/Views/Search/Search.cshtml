@@ -1,0 +1,16 @@
+﻿@using RecipesWebApp.Models
+@model RecipeInputViewModel
+@{
+    ViewBag.Title = "ТЪРСЕНЕ";
+}
+
+<div>
+    @Html.Partial("_SearchByType", Model.Type )
+</div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/ajax")
+}
+
+
+
