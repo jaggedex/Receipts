@@ -1,0 +1,22 @@
+﻿@using (Html.BeginForm())
+{
+    <div>
+        <ul id="productsList">
+
+        </ul>
+    </div>
+    <div>
+        @Html.TextBox("ProductName", null, new { @id= "productText", @class = "form-control", @style = "width: 500px" })
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input id="addProduct" type="submit" value="Добави продукт" class="btn btn-default" />
+            </div>
+        </div>  
+    </div>
+    <script>
+        $('#addProduct').on('submit', function () {
+            $('#productsList').append($('<li>').append($('#productText').val))
+        })
+    </script>
+}

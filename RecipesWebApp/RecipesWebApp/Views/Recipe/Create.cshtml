@@ -7,7 +7,7 @@
 <h2 class="text-center">ДОБАВИ РЕЦЕПТА</h2>
 @using (Html.BeginForm())
 {
-   @Html.AntiForgeryToken()
+    @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <div class="form-horizontal">
@@ -56,6 +56,36 @@
                         }
                     </div>
                 </div>
+            </div>
+            <div>
+                <div>
+                    <ul id="productsList"></ul>
+                </div>
+                <div>
+                    @Html.TextBox("ProductName", null, new { @id = "productText", @class = "form-control", @style = "width: 500px" })
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input onclick="addItem()" id="addProduct" type="button" value="Добави продукт" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+                @Html.HiddenFor(x => x.newProduct, new { @id = "newProducts" })
+                <script>
+                    function addItem() {
+                        let text = $('#productText').val();
+                        addItemToLIst(text);
+                        $('#productText').val('');
+                        let input = $('#newProducts')
+                        input.val(input.val() + text + '&');
+                    }
+                    function addItemToLIst(text) {
+                        let li = $('<li>')
+                        .append($("<span>").text(text));
+                        $('#productsList').append(li);
+                    }
+                </script>
+               
             </div>
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">

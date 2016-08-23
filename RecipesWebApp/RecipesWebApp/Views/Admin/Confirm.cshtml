@@ -1,0 +1,99 @@
+﻿@using RecipesWebApp.Models
+
+@model RecipeViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Потвърждение</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+
+    <div class="form-horizontal">
+        <div id="custom-form">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2 label-create-form", @style = "display: inline-block; text-align: right" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control", @style = "width: 500px" } })
+                    @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2 label-create-form", @style = "display: inline-block; text-align: right" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Description, 10, 80, new { htmlAttributes = new { @class = "form-control", @style = "width: 500px" } })
+                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2 label-create-form", @style = "display: inline-block; text-align: right" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.Type,
+             new List<SelectListItem> {
+                                new SelectListItem {Text = "Предястие", Value="Предястие" },
+                                new SelectListItem {Text = "Основно ястие", Value="Основно ястие" },
+                                new SelectListItem {Text = "Десерт", Value="Десерт" } }, "--Избери категория--", new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger", @style = "width: 500px" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Products, htmlAttributes: new { @class = "control-label col-md-2 label-create-form", @style = "display: inline-block; text-align: right" })
+                <div class="col-md-10">
+                    <div style="width:500px; border: 1px solid #cccccc; border-radius: 5px; overflow-y: scroll; height:110px">
+                       
+                        @for (int i = 0; i < Model.Products.Count(); i++)
+                {
+
+                            <div class="checkbox" >
+                                @Html.HiddenFor(model => model.Products[i].Text)
+                                @Html.HiddenFor(model => model.Products[i].Value)
+                                @*@Html.CheckBoxFor(model => model.Products[i].Selected)*@
+                                <span>@Html.DisplayFor(model => model.Products[i].Text)</span>
+                            </div>
+
+                        }
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProductsConfirm, htmlAttributes: new { @class = "control-label col-md-2 label-create-form", @style = "display: inline-block; text-align: right" })
+                <div class="col-md-10">
+                    <div style="width:500px; border: 1px solid #cccccc; border-radius: 5px; overflow-y: scroll; height:110px">
+                        @for (int i = 0; i < Model.ProductsConfirm.Count(); i++)
+                {
+
+                            <div class="checkbox">
+                                @Html.HiddenFor(model => model.ProductsConfirm[i].Text)
+                                @Html.HiddenFor(model => model.ProductsConfirm[i].Value)
+                                @*@Html.CheckBoxFor(model => model.ProductsConfirm[i].Selected)*@
+                                <span>@Html.DisplayFor(model => model.ProductsConfirm[i].Text)</span>
+                            </div>
+
+                        }
+                        
+                    </div>
+                </div>
+                @Html.HiddenFor(model => model.AuthorId)
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Одобри" class="btn btn-default" />
+                    @Html.ActionLink("Изтрий", "Delete", "Admin", new { id = Model.ID }, new { @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+    </div>
+                            }
+<p>
+
+    @Html.ActionLink("Обратно", "Index")
+</p>
+

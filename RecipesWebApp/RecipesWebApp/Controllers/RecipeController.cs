@@ -61,6 +61,27 @@ namespace RecipesWebApp.Controllers
         {
             if (model != null && this.ModelState.IsValid)
             {
+                var newProductsName = new List<string>();
+                var newConfirmProduct = new List<ProductsConfirm>();
+                if (model.newProduct != null)
+                {
+                    
+                    newProductsName = model.newProduct.Split(new char[] { '&' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+                    foreach (var pr in newProductsName)
+                    {
+                        var prod = new ProductsConfirm() { ProductName = pr };
+                        this.db.ProductsConfirm.Add(prod);
+
+                    }
+                    this.db.SaveChanges();
+                    
+                    foreach (var pr in newProductsName)
+                    {
+                        var selectedNewProducts = this.db.ProductsConfirm.Where(x => x.ProductName == pr).FirstOrDefault();
+                        newConfirmProduct.Add(selectedNewProducts);
+                    }
+
+                }
                 var selectedProducts = new List<Product>();
                 foreach (var product in model.SelectProducts)
                 {
@@ -71,17 +92,18 @@ namespace RecipesWebApp.Controllers
                     }
                 }
                 // TODO ДА СЕ СЪЗДАВА В МЕЖДИННА ТАБЛИЦА ОТ КОЯТО АДМИНА ДА ГИ ПРЕХВЪРЛЯ !!!!
-                var newRecipe = new Recipe()
+                var newRecipe = new RecipeConfirm()
                 {
                     AuthorId = this.User.Identity.GetUserId(),
                     Title = model.Title,
                     Description = model.Description,
                     Type = model.Type,
-                    Products = selectedProducts
+                    Products = selectedProducts,
+                    ProductsConfirm = newConfirmProduct
                 };
-                this.db.Recipes.Add(newRecipe);
+                this.db.RecipesConfirm.Add(newRecipe);
                 this.db.SaveChanges();
-                this.AddNotification("Добавихте успешно нова рецепта.", NotificationType.SUCCESS);
+                this.AddNotification("Рецептата предстои да бъде одобрена от администратор.", NotificationType.SUCCESS);
                 switch (model.Type)
                 {
                     case "Предястие":
@@ -232,6 +254,13 @@ namespace RecipesWebApp.Controllers
             return Redirect("/Recipe/Details/" + id);
         }
 
-
+        public ActionResult My()
+        {
+            var currentUser = this.User.Identity.GetUserId();
+            var myRecipes = this.db.Recipes.Where(x => x.AuthorId == currentUser).ToList();
+            return View(myRecipes);
+        }
+      
     }
 }
+

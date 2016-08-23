@@ -1,0 +1,8 @@
+﻿@using RecipeWebData
+@model RecipeConfirm
+@{
+    ViewBag.Title = "ReceiptsView";
+}
+<div class="well">
+    @Html.ActionLink(Model.Title, "Confirm", "Admin", new { id = Model.ID }, null)
+</div>

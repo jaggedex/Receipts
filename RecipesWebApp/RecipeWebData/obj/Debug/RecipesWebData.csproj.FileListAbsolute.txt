@@ -11,4 +11,3 @@ D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\MYTRY\RecipesWebApp\RecipeWebData\bin\Debug\M
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\MYTRY\RecipesWebApp\RecipeWebData\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\MYTRY\RecipesWebApp\RecipeWebData\obj\Debug\RecipeWebData.dll
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\MYTRY\RecipesWebApp\RecipeWebData\obj\Debug\RecipeWebData.pdb
-D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\MYTRY\RecipesWebApp\RecipeWebData\obj\Debug\RecipesWebData.csprojResolveAssemblyReference.cache

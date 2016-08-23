@@ -21,6 +21,10 @@ namespace RecipesWebData
         public IDbSet<Comment> Comments { get; set; }
 
         public IDbSet<Rating> Ratings { get; set; }
+
+        public IDbSet<RecipeConfirm> RecipesConfirm { get; set; }
+
+        public IDbSet<ProductsConfirm> ProductsConfirm { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

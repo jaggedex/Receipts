@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RecipeWebData;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace RecipesWebData
 
         public virtual ICollection<Recipe> Recipes { get; set; }
 
-
+        public virtual ICollection<RecipeConfirm> RecipesConfirm { get; set; }
 
 
     }

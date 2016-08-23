@@ -54,6 +54,8 @@ namespace RecipesWebApp.Models
 
         public PaginationViewModel Pagination { get; set; }
 
+        public string newProduct { get; set; }
+
         public static Expression<Func<Recipe, RecipeInputViewModel>> ViewModel
         {
             get
