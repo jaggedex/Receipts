@@ -1,0 +1,14 @@
+﻿@using (Html.BeginForm())
+{
+    <div>
+        @Html.TextBox("UserSearched")
+        @Html.DropDownList("RoleChange",
+                            new List<SelectListItem> {
+                                new SelectListItem {Text = "Администратор", Value="Administrators" },
+                                new SelectListItem {Text = "Потребител", Value="User" },
+                                }, "--Избери права--", new { htmlAttributes = new { @class = "form-control input-lg" } })
+       
+        <input type="Submit" value="Промени права" />
+    </div>
+
+}
