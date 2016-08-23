@@ -1,10 +1,21 @@
 ﻿@using RecipeWebData
 @model ICollection<RecipeConfirm>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Администраторски панел";
 }
 
-<h2>Index</h2>
+<h2>Администраторски панел</h2>
+@if (this.User.IsInRole("MasterAdministrators"))
+{
+    <div id="masterAdmin">
+        @Ajax.ActionLink("Смяна на потребителски права", "ChangeRoles", "Admin", new { type = Model }, new AjaxOptions
+{
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "masterAdmin"
+}, new { @class = "btn btn-default" })
+    </div>
+}
+
 @foreach (var item in Model)
 {
     @Html.DisplayFor(x => item, "_PendingRecipeView")

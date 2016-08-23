@@ -34,6 +34,8 @@ namespace RecipeWebData
 
         public string AuthorId { get; set; }
 
+        public byte[] Image { get; set; }
+
 
         public virtual ICollection<ProductsConfirm> ProductsConfirm { get; set; } 
 

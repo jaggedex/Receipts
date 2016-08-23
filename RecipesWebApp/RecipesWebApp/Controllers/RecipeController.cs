@@ -57,10 +57,16 @@ namespace RecipesWebApp.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(RecipeInputViewModel model)
+        public ActionResult Create(RecipeInputViewModel model, HttpPostedFileBase ChoosenFile)
         {
             if (model != null && this.ModelState.IsValid)
             {
+
+                if (model.Image != null)
+                {
+                    model.Image = new byte[ChoosenFile.ContentLength];
+                    ChoosenFile.InputStream.Read(model.Image, 0, ChoosenFile.ContentLength); 
+                }
                 var newProductsName = new List<string>();
                 var newConfirmProduct = new List<ProductsConfirm>();
                 if (model.newProduct != null)
@@ -99,7 +105,8 @@ namespace RecipesWebApp.Controllers
                     Description = model.Description,
                     Type = model.Type,
                     Products = selectedProducts,
-                    ProductsConfirm = newConfirmProduct
+                    ProductsConfirm = newConfirmProduct,
+                    Image = model.Image
                 };
                 this.db.RecipesConfirm.Add(newRecipe);
                 this.db.SaveChanges();

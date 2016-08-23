@@ -3,10 +3,10 @@
 @model RecipeViewModel
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Потвърждаване на рецепти";
 }
 
-<h2>Потвърждение</h2>
+<h2>Потвърждаване на рецепти</h2>
 
 @using (Html.BeginForm())
 {
@@ -43,6 +43,8 @@
                     @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger", @style = "width: 500px" })
                 </div>
             </div>
+            
+            
             <div class="form-group">
                 @Html.LabelFor(model => model.Products, htmlAttributes: new { @class = "control-label col-md-2 label-create-form", @style = "display: inline-block; text-align: right" })
                 <div class="col-md-10">
@@ -84,14 +86,25 @@
                 @Html.HiddenFor(model => model.AuthorId)
             </div>
             <div class="form-group">
+                @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-2 label-create-form", @style = "display: inline-block; text-align: right" })
+                <div class="col-md-6" >
+                    <img src="data:image;base64,@System.Convert.ToBase64String(Model.Image)" class="img-responsive" />
+                </div>
+            </div>
+            @*<div class="col-md-12">
+                <div class="col-md-6">
+                    <img src="data:image;base64,@System.Convert.ToBase64String(Model.Image)" class="img-responsive" />
+                </div>
+            </div>*@
+            <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" value="Одобри" class="btn btn-default" />
                     @Html.ActionLink("Изтрий", "Delete", "Admin", new { id = Model.ID }, new { @class = "btn btn-default" })
                 </div>
             </div>
-        </div>
+            </div>
     </div>
-                            }
+}
 <p>
 
     @Html.ActionLink("Обратно", "Index")

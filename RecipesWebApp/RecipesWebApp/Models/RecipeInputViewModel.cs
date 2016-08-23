@@ -24,10 +24,10 @@ namespace RecipesWebApp.Models
         [Display(Name = "Автор")]
         public string User { get; set; }
 
-        //[Required(ErrorMessage = "Products can't be empty!")]
+        [Required(ErrorMessage = "Трябва да изберете поне един продукт")]
         [Display(Name = "Необходими продукти")]
         public  List<SelectListItem> SelectProducts { get; set; }
-
+        [Required(ErrorMessage = "Трябва да изберете поне един продукт")]
         [Display(Name = "Необходими продукти")]
         public  ICollection<Product> Products { get; set; }
 
@@ -55,6 +55,8 @@ namespace RecipesWebApp.Models
         public PaginationViewModel Pagination { get; set; }
 
         public string newProduct { get; set; }
+
+        public byte[] Image { get; set; }
 
         public static Expression<Func<Recipe, RecipeInputViewModel>> ViewModel
         {

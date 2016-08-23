@@ -23,6 +23,8 @@ namespace RecipesWebApp.Models
         
         public string AuthorId { get; set; }
 
+        public byte[] Image { get; set; }
+
 
         public virtual List<SelectListItem> ProductsConfirm { get; set; }
 
