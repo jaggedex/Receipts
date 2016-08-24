@@ -36,6 +36,8 @@ namespace RecipesWebData
 
         public int Rating { get; set; }
 
+        public byte[] Image { get; set; }
+
 
         public virtual ICollection<Product> Products { get; set; }
 

@@ -123,6 +123,13 @@
         </dd>
 
     </dl>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-2 label-create-form", @style = "display: inline-block; text-align: right" })
+        <div class="col-md-6">
+            <img src="data:image;base64,@System.Convert.ToBase64String(Model.Image)" class="img-responsive" />
+            @*<input type="hidden" name="ChoosenFile" value="data:image;base64,@System.Convert.ToBase64String(Model.Image)" />*@
+        </div>
+    </div>
 </div>
     <div class="coll-md-12">
         @foreach (var comment in Model.Comments)

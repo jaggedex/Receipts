@@ -4,11 +4,17 @@
 
 @{
     ViewBag.Title = "Потвърждаване на рецепти";
+
+}
+
+@{
+    TempData["image"] = Model.Image;
+
 }
 
 <h2>Потвърждаване на рецепти</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Confirm", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
@@ -43,17 +49,17 @@
                     @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger", @style = "width: 500px" })
                 </div>
             </div>
-            
-            
+
+
             <div class="form-group">
                 @Html.LabelFor(model => model.Products, htmlAttributes: new { @class = "control-label col-md-2 label-create-form", @style = "display: inline-block; text-align: right" })
                 <div class="col-md-10">
                     <div style="width:500px; border: 1px solid #cccccc; border-radius: 5px; overflow-y: scroll; height:110px">
-                       
+
                         @for (int i = 0; i < Model.Products.Count(); i++)
                 {
 
-                            <div class="checkbox" >
+                            <div class="checkbox">
                                 @Html.HiddenFor(model => model.Products[i].Text)
                                 @Html.HiddenFor(model => model.Products[i].Value)
                                 @*@Html.CheckBoxFor(model => model.Products[i].Selected)*@
@@ -61,7 +67,7 @@
                             </div>
 
                         }
-                        
+
                     </div>
                 </div>
             </div>
@@ -80,29 +86,29 @@
                             </div>
 
                         }
-                        
+
                     </div>
                 </div>
                 @Html.HiddenFor(model => model.AuthorId)
             </div>
-            <div class="form-group">
-                @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-2 label-create-form", @style = "display: inline-block; text-align: right" })
-                <div class="col-md-6" >
-                    <img src="data:image;base64,@System.Convert.ToBase64String(Model.Image)" class="img-responsive" />
+            @if (Model.Image != null)
+            {
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-2 label-create-form", @style = "display: inline-block; text-align: right" })
+                    <div class="col-md-6">
+                        <img src="data:image;base64,@System.Convert.ToBase64String(Model.Image)" class="img-responsive" />
+                        <input type="hidden" name="ChoosenFile" value="data:image;base64,@System.Convert.ToBase64String(Model.Image)" />                     
+                    </div>
                 </div>
-            </div>
-            @*<div class="col-md-12">
-                <div class="col-md-6">
-                    <img src="data:image;base64,@System.Convert.ToBase64String(Model.Image)" class="img-responsive" />
-                </div>
-            </div>*@
+            }
+
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" value="Одобри" class="btn btn-default" />
                     @Html.ActionLink("Изтрий", "Delete", "Admin", new { id = Model.ID }, new { @class = "btn btn-default" })
                 </div>
             </div>
-            </div>
+        </div>
     </div>
 }
 <p>

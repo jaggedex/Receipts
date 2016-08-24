@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using PagedList;
 using RecipesWebApp.Extensions;
 using RecipesWebApp.Models;
 using RecipesWebData;
@@ -15,9 +16,9 @@ namespace RecipesWebApp.Controllers
     public class AdminController : BaseController
     {
         // GET: Admin
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
-            var allRecipes = this.db.RecipesConfirm.ToList();
+            var allRecipes = this.db.RecipesConfirm.ToList().ToPagedList(page ?? 1, 5);
 
             return View(allRecipes);
         }
@@ -45,13 +46,15 @@ namespace RecipesWebApp.Controllers
                 }).ToList(),
                 Image = recipe.Image
             };
-
+            ViewBag.Image = recipe.Image;
             return View(editedRecipe);
         }
 
         [HttpPost]
-        public ActionResult Confirm(int id, RecipeViewModel model)
+        public ActionResult Confirm(int id, RecipeViewModel model,  string ChoosenFile)
         {
+            var converted = ChoosenFile.Substring(ChoosenFile.IndexOf(',') + 1);
+            byte[] image = Convert.FromBase64String(converted);
             if (IsAdmin())
             {
                 var recipeToRemove = this.db.RecipesConfirm.Find(id);
@@ -102,7 +105,8 @@ namespace RecipesWebApp.Controllers
                     Description = model.Description,
                     AuthorId = model.AuthorId,
                     Type = model.Type,
-                    Products = oldProducts
+                    Products = oldProducts,
+                    Image = image
                 };
                 foreach (var item in newAddedProducts)
                 {
@@ -154,6 +158,7 @@ namespace RecipesWebApp.Controllers
                 {
                     var context = new ApplicationDbContext();
                     AddUserToRole(context, UserSearched, RoleChange);
+                    
                 }
                 else
                 {
@@ -167,11 +172,17 @@ namespace RecipesWebApp.Controllers
                 if (userID != null)
                 {
                     var userRole = this.db.Roles.Where(x => x.Name == "Administrators").FirstOrDefault();
+                    
                     if (userID.Roles.Contains(userID.Roles.Where(x => x.RoleId == userRole.Id).FirstOrDefault()))
                     {
-                        this.AddNotification("Потребителя вече е с избраната роля.", NotificationType.WARNING);
+                        userID.Roles.Remove(userID.Roles.Where(x => x.RoleId == userRole.Id).FirstOrDefault());
+                        this.AddNotification("Статуса е променен.", NotificationType.SUCCESS);
                     }
-                    userID.Roles.Remove(userID.Roles.Where(x => x.RoleId == userRole.Id).FirstOrDefault());
+                    else
+                    {
+                        this.AddNotification("Статуса не е променен.", NotificationType.WARNING);
+                    }
+
                 }
                 else
                 {
@@ -195,9 +206,13 @@ namespace RecipesWebApp.Controllers
             {
 
                 Redirect("/Admin/Index");
-                this.AddNotification("Потребителя вече е с избраната роля.", NotificationType.WARNING);
-
+                this.AddNotification("Статуса не е променен.", NotificationType.WARNING);
             }
+            else
+            {
+                this.AddNotification("Статуса е променен.", NotificationType.SUCCESS);
+            }
+
         }
 
     }

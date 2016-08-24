@@ -1,5 +1,7 @@
-﻿@using RecipesWebData
-@model IEnumerable<Recipe>
+﻿@using PagedList;
+@using PagedList.Mvc;
+@using RecipesWebData
+@model IPagedList<Recipe>
 @{
     ViewBag.Title = "My";
 }
@@ -7,4 +9,4 @@
 <h2>My</h2>
 
 @Html.DisplayFor(d => d, "_RecipeView")
-@*@Html.PagedListPager(Model, page => Url.Action("My", new { page }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true, DisplayItemSliceAndTotal = true })*@
+@Html.PagedListPager(Model, page => Url.Action("My", new { page }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true, DisplayItemSliceAndTotal = true })

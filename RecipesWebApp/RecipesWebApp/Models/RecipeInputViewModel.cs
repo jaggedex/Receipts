@@ -27,7 +27,7 @@ namespace RecipesWebApp.Models
         [Required(ErrorMessage = "Трябва да изберете поне един продукт")]
         [Display(Name = "Необходими продукти")]
         public  List<SelectListItem> SelectProducts { get; set; }
-        [Required(ErrorMessage = "Трябва да изберете поне един продукт")]
+        
         [Display(Name = "Необходими продукти")]
         public  ICollection<Product> Products { get; set; }
 
@@ -72,8 +72,8 @@ namespace RecipesWebApp.Models
                     Products = e.Products,
                     AuthorId = e.AuthorId, 
                     Ratings = e.Ratings,
-                    Comments = e.Comments
-
+                    Comments = e.Comments,
+                    Image = e.Image
                 };
             }
         }

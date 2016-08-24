@@ -62,7 +62,7 @@ namespace RecipesWebApp.Controllers
             if (model != null && this.ModelState.IsValid)
             {
 
-                if (model.Image != null)
+                if (ChoosenFile != null)
                 {
                     model.Image = new byte[ChoosenFile.ContentLength];
                     ChoosenFile.InputStream.Read(model.Image, 0, ChoosenFile.ContentLength); 
@@ -261,11 +261,12 @@ namespace RecipesWebApp.Controllers
             return Redirect("/Recipe/Details/" + id);
         }
 
-        public ActionResult My()
+        public ActionResult My(int? page)
         {
             var currentUser = this.User.Identity.GetUserId();
             var myRecipes = this.db.Recipes.Where(x => x.AuthorId == currentUser).ToList();
-            return View(myRecipes);
+            var pagedMyRecipes = myRecipes.ToPagedList(page ?? 1, 5);
+            return View(pagedMyRecipes);
         }
       
     }

@@ -1,5 +1,7 @@
-﻿@using RecipeWebData
-@model ICollection<RecipeConfirm>
+﻿@using PagedList;
+@using PagedList.Mvc;
+@using RecipeWebData
+@model IPagedList<RecipeConfirm>
 @{
     ViewBag.Title = "Администраторски панел";
 }
@@ -19,4 +21,6 @@
 @foreach (var item in Model)
 {
     @Html.DisplayFor(x => item, "_PendingRecipeView")
+   
 }
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true, DisplayItemSliceAndTotal = true })

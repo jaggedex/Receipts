@@ -40,7 +40,7 @@ namespace RecipesWebApp.Models
                     Date = e.Date,
                     Description = e.Description,
                     Type = e.Type,
-
+                    Image = e.Image
                 };
             }
         }
