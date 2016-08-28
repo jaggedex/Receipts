@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Търсене по основен продукт";
 }
-<h2 class="text-center">ДОБАВИ РЕЦЕПТА</h2>
+<h2 class="text-center">Търсене по основен продукт:</h2>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -14,7 +14,7 @@
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             @Html.HiddenFor(x => Model.Type)
             <div>
-                @Html.TextBox("searchByProduct")
+                @Html.TextBox("searchByProduct", null, new { @placeholder = "Въведи продукт" })
             </div>
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">

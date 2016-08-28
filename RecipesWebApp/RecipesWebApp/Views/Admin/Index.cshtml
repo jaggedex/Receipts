@@ -23,4 +23,8 @@
     @Html.DisplayFor(x => item, "_PendingRecipeView")
    
 }
-@Html.PagedListPager(Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true, DisplayItemSliceAndTotal = true })
+<div class="row">
+    <div class="pull-right" style="margin-right: 20px">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true, DisplayItemSliceAndTotal = false })
+    </div>
+</div>

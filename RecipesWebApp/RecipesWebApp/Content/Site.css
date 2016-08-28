@@ -1,24 +1,18 @@
 ﻿body {
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 20px;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
+Set padding to keep content from hitting the edges .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
+Override the default bootstrap behavior where horizontal description lists will truncate terms that are too long to fit in the left column .dl-horizontal dt {
     white-space: normal;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
+Set width on the form input elements since they're 100% wide by default input, select,
 textarea {
     max-width: 280px;
 }
@@ -28,17 +22,134 @@ hr {
     margin-bottom: 2px;
 }
 
-.category-type {
-    border-radius:5px;
+/*.category-type {
+    border-radius: 5px;
     text-decoration: none;
     border: 1px solid #3c2a2a;
-    
-}
+}*/
 
 a {
     text-decoration: none;
 }
 
 .recipes-search {
-    float:right;
+    float: right;
 }
+
+.labels {
+    background: rgba(0, 114, 255, 0.298039);
+    border-radius: 5px;
+    display: inline-block;
+    text-align: right;
+    vertical-align: central;
+    padding-bottom: 8px;
+}
+
+.labelsDeffected {
+    opacity: 0.6;
+    background-color: white;
+    opacity: 0.6;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: right;
+    vertical-align: central;
+    padding-top: 7px;
+}
+/*----------------------------------------------------
+    Navbar                 in Home/Index View 
+-----------------------------------------------------*/
+
+#searchInput {
+    width: 200px;
+}
+
+
+.navbar-brand {
+    padding: 25px 25px;
+}
+
+.nav > li > a {
+    padding-top: 20px;
+}
+
+/*-----------------------------------------------------
+    Carousel               in Home/Index View
+-----------------------------------------------------*/
+.carousel-dots {
+    height: 100px;
+    width: 100px;
+}
+
+#myCarousel .item {
+   
+
+}
+
+.carousel {
+    border-radius: 15px 15px;
+    overflow: hidden;
+}
+
+.carouse-foodtypes-titles {
+}
+
+/*#slide1 {
+background: url('../Images/salads.jpg') top center no-repeat;
+}
+#slide2{
+background: url('../../Images/meal_medium.jpg') top center no-repeat;
+}
+#slide3 {
+background: url('../../Images/dessert_medium.jpg') top center no-repeat;
+
+}*/
+
+
+/*----------------------------------------------------
+    Thumbnails             in Recipe/Index View
+-----------------------------------------------------*/
+
+.thumbnail a {
+    text-decoration: none;
+}
+
+/*----------------------------------------------------
+    Portrait & landscape phone           
+-----------------------------------------------------*/
+
+@media(max-width: 480px) {
+    #myCarousel .item {
+        height: 200px;
+    }
+}
+
+/*----------------------------------------------------
+    Landscape phone to portrait tablet            
+-----------------------------------------------------*/
+@media(max-width: 768px) {
+    #myCarousel .item {
+        height: 200px;
+    }
+}
+/*----------------------------------------------------
+    Up to small desctop             
+-----------------------------------------------------*/
+@media(max-width: 979px) {
+    #myCarousel .item {
+        height: 300px;
+    }
+}
+/*----------------------------------------------------
+    Small desctop & up            
+-----------------------------------------------------*/
+@media(min-width: 979px) {
+
+    #myCarousel .item {
+        height: 400px;
+    }
+}
+
+/*----------------------------------------------------
+    Thumbnails             in Recipe/Index View
+-----------------------------------------------------*/
+

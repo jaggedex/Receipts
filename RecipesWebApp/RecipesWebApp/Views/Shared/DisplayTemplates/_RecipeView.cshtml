@@ -5,14 +5,19 @@
 @{
     ViewBag.Title = "ReceiptsView";
 }
+<ul class="nav nav-pills nav-stacked">
+    
+    @foreach (var item in Model)
+    {
 
-@foreach (var item in Model)
-{
-    <div class="well">
+
+        <li>
+            @Html.ActionLink(item.Title, "Details", "Recipe", new { id = item.ID }, null)
+
         <p>
 
-            @Html.ActionLink(item.Title, "Details", "Recipe", new { id = item.ID }, null)
-            <div>
+
+            
                 @{var TotalVotedSum = 0D;
                     foreach (var itm in item.Ratings)
                     {
@@ -29,15 +34,19 @@
                         <text>Оценка: 0/5</text>
                     }
                 }
-            </div>
+          
 
             @*//TODO a little part of description !*@
 
         </p>
+            <p>
+                @*@if (Roles.IsUserInRole("Administrators") || Roles.IsUserInRole("MasterAdministrators"))
+            {*@
+                @Html.ActionLink("Промени", "Edit", "Recipe", new { id = item.ID, oldFoodType = item.Type }, new { @class="btn btn-default btn-xs"})
 
+                @Html.ActionLink("Изтрий", "Delete", "Recipe", new { id = item.ID }, new { onclick = "return confirm('Сигурни ли сте, че искате да изтриете рецептата?');", @class = "btn btn-default btn-xs"})
+            </p>
+    </li>
 
-        @Html.ActionLink("Промени", "Edit", "Recipe", new { id = item.ID, oldFoodType = item.Type }, null)
-
-        @Html.ActionLink("Изтрий", "Delete", "Recipe", new { id = item.ID }, new { onclick = "return confirm('Сигурни ли сте, че искате да изтриете рецептата?');" })
-    </div>
-                    }
+    }
+</ul>

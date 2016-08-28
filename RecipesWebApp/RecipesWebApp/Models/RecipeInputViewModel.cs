@@ -31,7 +31,8 @@ namespace RecipesWebApp.Models
         [Display(Name = "Необходими продукти")]
         public  ICollection<Product> Products { get; set; }
 
-
+        [AllowHtml]
+        [DataType(DataType.MultilineText)]
         [Required(ErrorMessage = "Описанието не може да бъде празно!")]
         [StringLength(2000, ErrorMessage = "Описанието на рецептата трябва да съдържа поне 10 символа.", MinimumLength = 10)]
         [Display(Name = "Начин на приготвяне")]

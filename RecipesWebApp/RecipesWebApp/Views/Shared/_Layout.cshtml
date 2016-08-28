@@ -4,47 +4,221 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Рецептник</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.placeholder.min.js"></script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <script type="text/javascript" src="@Url.Content("/Scripts/SlideDownSlideUp.js")"></script>
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+    @*<nav class="navbar navbar-default">
+        <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("РЕЦЕПТНИК", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a class="navbar-brand" href="#">Brand</a>
             </div>
-            <div class="navbar-collapse collapse">
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Начало", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Рецепти", "Index", "Recipe")</li>
-                    <li>@Html.ActionLink("Добави рецепта", "Create", "Recipe")</li>
-                    <li>@Html.ActionLink("Моите рецепти", "My", "Recipe")</li>
-                    <li>@Html.ActionLink("Търсене", "Index", "Search")</li>
-                    <li>@Html.ActionLink("Admin panel", "Index", "Admin")</li>
+                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
                 </ul>
-                @Html.Partial("_LoginPartial")
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                </ul>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @Html.Partial("_Notifications")
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET MVC5 Рецептник</p>
-        </footer>
-    </div>
+    </nav>*@
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    @*<nav class="navbar navbar-default ">
+                <div class="container-fluid ">
+                    <div class="container-fluid ">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Brand</a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                                <li><a href="#">Link</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">One more separated link</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <form class="navbar-form navbar-left">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </form>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#">Link</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+        </nav>*@
+    <!--Моя Наввв-->
+
+        <!--<div class="navbar navbar-fixed-top" style="background-color:antiquewhite">
+            <div class="container">
+                <button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+
+              <a class="navbar-brand" href="/"><img src="~/Images/logo2.png" alt="Recipes Logo" /></a>
+
+                <div class="collapse navbar-collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#">Начало</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-asterisk" style="padding:10px"></span>Рецепти<strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#"><span class="glyphicon glyphicon-glass" style="padding:10px"></span>Предястие</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#"><span class="glyphicon glyphicon-cutlery" style="padding:10px"></span>Основно ястие</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#"><span class="glyphicon glyphicon-heart" style="padding:10px"></span>Десерт</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="active">
+                            <a href="#">Начало</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Край</a>
+                        </li>
+                        <li class="active">
+                            <a href="#">Начало</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Край</a>
+                        </li>
+                    </ul>
+                    
+                    <ul class="nav navbar-nav pull-right">
+                        <li>
+                            <form class="navbar-form pull-left">
+                                <input type="text" class="form-control" placeholder="Търси рецепта" id="searchInput" />
+                                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                            </form>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user" style="padding:10px"></span>Профил<strong class="caret" ></strong></a>
+                            <ul class="dropdown-menu pager">
+                                <li>
+                                    <a href="#"><span class="glyphicon glyphicon-log-in"  style="padding:10px"></span>Sign In</a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="glyphicon glyphicon-new-window" style="padding:10px"></span>Register</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#"><span class="glyphicon glyphicon-off"  style="padding:10px"></span>Log Out</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+ -->
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink("РЕЦЕПТНИК", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Начало", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Рецепти", "Index", "Recipe")</li>
+                            <li>@Html.ActionLink("Добави рецепта", "Create", "Recipe")</li>
+                            <li>@Html.ActionLink("Моите рецепти", "My", "Recipe")</li>
+                            <li>@Html.ActionLink("Търсене", "Index", "Search")</li>
+                            <li>@Html.ActionLink("Admin panel", "Index", "Admin")</li>
+                        </ul>
+                        @Html.Partial("_LoginPartial")
+                    </div>
+                </div>
+            </div>
+        <div class="container body-content">
+            @Html.Partial("_Notifications")
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET MVC5 Рецептник</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
 </body>
 </html>
 

@@ -32,7 +32,7 @@ namespace RecipesWebApp.Controllers
 
         public ActionResult ListMainDishes(int? page)
         {
-            var mainDishes = this.db.Recipes.Where(a => a.Type == "Основно ястие").OrderByDescending(x=>x.Date).ToList().ToPagedList(page ?? 1, 5);
+            var mainDishes = this.db.Recipes.Where(a => a.Type == "Основно ястие").OrderByDescending(x => x.Date).ToList().ToPagedList(page ?? 1, 5);
             return View(mainDishes);
         }
 
@@ -44,7 +44,8 @@ namespace RecipesWebApp.Controllers
         [Authorize]
         public ActionResult Create()
         {
-            var products = this.db.Products.OrderBy(x => x.ProductName).Select(p => new SelectListItem() {
+            var products = this.db.Products.OrderBy(x => x.ProductName).Select(p => new SelectListItem()
+            {
                 Text = p.ProductName,
                 Value = p.ID.ToString(),
                 Selected = false
@@ -65,13 +66,13 @@ namespace RecipesWebApp.Controllers
                 if (ChoosenFile != null)
                 {
                     model.Image = new byte[ChoosenFile.ContentLength];
-                    ChoosenFile.InputStream.Read(model.Image, 0, ChoosenFile.ContentLength); 
+                    ChoosenFile.InputStream.Read(model.Image, 0, ChoosenFile.ContentLength);
                 }
                 var newProductsName = new List<string>();
                 var newConfirmProduct = new List<ProductsConfirm>();
                 if (model.newProduct != null)
                 {
-                    
+
                     newProductsName = model.newProduct.Split(new char[] { '&' }, StringSplitOptions.RemoveEmptyEntries).ToList();
                     foreach (var pr in newProductsName)
                     {
@@ -80,7 +81,7 @@ namespace RecipesWebApp.Controllers
 
                     }
                     this.db.SaveChanges();
-                    
+
                     foreach (var pr in newProductsName)
                     {
                         var selectedNewProducts = this.db.ProductsConfirm.Where(x => x.ProductName == pr).FirstOrDefault();
@@ -98,11 +99,15 @@ namespace RecipesWebApp.Controllers
                     }
                 }
                 // TODO ДА СЕ СЪЗДАВА В МЕЖДИННА ТАБЛИЦА ОТ КОЯТО АДМИНА ДА ГИ ПРЕХВЪРЛЯ !!!!
+                var unencoded = model.Description;
+                var encoded = HttpUtility.HtmlEncode(unencoded);
+                
                 var newRecipe = new RecipeConfirm()
+                
                 {
                     AuthorId = this.User.Identity.GetUserId(),
                     Title = model.Title,
-                    Description = model.Description,
+                    Description = encoded,
                     Type = model.Type,
                     Products = selectedProducts,
                     ProductsConfirm = newConfirmProduct,
@@ -128,7 +133,6 @@ namespace RecipesWebApp.Controllers
             var recipe = this.db.Recipes.Where(x => x.ID == id).Select(RecipeInputViewModel.ViewModel).FirstOrDefault();
             recipe.CurrentUserId = this.User.Identity.GetUserId();
             recipe.User = this.User.Identity.GetUserName();
-
             return View(recipe);
         }
 
@@ -197,13 +201,13 @@ namespace RecipesWebApp.Controllers
             recipeToEdit.SelectProducts = products;
             if (this.User.Identity.GetUserId() == recipeToEdit.AuthorId || IsAdmin())
             {
-                return View(recipeToEdit); 
+                return View(recipeToEdit);
             }
             else
             {
                 this.AddNotification("Нямате право да променяте тази рецепта.", NotificationType.WARNING);
                 return Redirect("/Recipe/Index");
-                
+
 
             }
         }
@@ -233,7 +237,7 @@ namespace RecipesWebApp.Controllers
 
             this.db.SaveChanges();
             this.AddNotification("Вие променихте успешно вашата рецепта.", NotificationType.SUCCESS);
-            
+
             return Redirect("/Recipe/Details/" + model.Id);
         }
         [Authorize]
@@ -268,7 +272,7 @@ namespace RecipesWebApp.Controllers
             var pagedMyRecipes = myRecipes.ToPagedList(page ?? 1, 5);
             return View(pagedMyRecipes);
         }
-      
+
     }
 }
 

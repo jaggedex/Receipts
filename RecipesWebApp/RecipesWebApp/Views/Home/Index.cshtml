@@ -1,7 +1,7 @@
 ﻿@using RecipesWebApp.Models
 @model RecipeCollectionsViewModel
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Начало";
 }
 
 <br />
@@ -9,38 +9,36 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="0" class="active carousel-dots"></li>
+        <li data-target="#myCarousel" data-slide-to="1" class="carousel-dots"></li>
+        <li data-target="#myCarousel" data-slide-to="2" class="carousel-dots"></li>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-
-        <div class="item active">
-            <a href="/Receipts/Salads">
-                <img src="~/Images/salads.jpg" alt="Image">
+         <div class="item active" id="slide1">
+            <a href="/Recipe/ListAppetizers">
+                <img src="~/Images/appetizer_medium.jpg" alt="Image Appetizers">
                 <div class="carousel-caption">
-                    <h1>ПРЕДЯСТИЯ</h1>
+                    <h1 carouse-foodtypes-titles>ПРЕДЯСТИЯ</h1>
                 </div>
             </a>
         </div>
 
-        <div class="item">
-            <img src="~/Images/meals.jpg" alt="Image">
-            <a href="#">
+        <div class="item" id="slide2">
+            <a href="Recipe/ListMainDishes">
+                <img src="~/Images/meal_medium.jpg" alt="Image MainDishes">
                 <div class="carousel-caption">
-                    <h1>ОСНОВНИ ЯСТИЯ</h1>
+                    <h1 class="carouse-foodtypes-titles">ОСНОВНИ ЯСТИЯ</h1>
 
                 </div>
             </a>
         </div>
-        <div class="item">
-
-            <a href="#">
-                <img src="~/Images/desserts.jpg" alt="Image">
+        <div class="item" id="slide3">
+            <a href="/Recipe/ListDesserts">
+                <img src="~/Images/dessert_medium.jpg" alt="Image Desserts">
                 <div class="carousel-caption">
-                    <h1>ДЕСЕРТИ</h1>
+                    <h1 carouse-foodtypes-titles>ДЕСЕРТИ</h1>
                 </div>
             </a>
         </div>
@@ -61,7 +59,7 @@
 <br />
 
 <div class="container text-center">
-    <h2>Най-добри рецепти</h2><br>
+    <h2>Най-добри рецепти по категория</h2><br>
     <div class="row">
         <div class="col-sm-4">
             <p><h4>Предястия</h4></p>

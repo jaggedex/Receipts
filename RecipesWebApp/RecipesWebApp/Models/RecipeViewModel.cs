@@ -2,6 +2,7 @@
 using RecipeWebData;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Web;
@@ -14,7 +15,8 @@ namespace RecipesWebApp.Models
         public int ID { get; set; }
         
         public string Title { get; set; }
-        
+
+        [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
         public string Type { get; set; }

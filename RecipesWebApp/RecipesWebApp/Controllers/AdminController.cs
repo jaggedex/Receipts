@@ -51,10 +51,16 @@ namespace RecipesWebApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult Confirm(int id, RecipeViewModel model,  string ChoosenFile)
+        public ActionResult Confirm(int id, RecipeViewModel model, string ChoosenFile)
         {
-            var converted = ChoosenFile.Substring(ChoosenFile.IndexOf(',') + 1);
-            byte[] image = Convert.FromBase64String(converted);
+            byte[] image = null;
+            if (ChoosenFile != null)
+            {
+                var converted = ChoosenFile.Substring(ChoosenFile.IndexOf(',') + 1);
+                image = Convert.FromBase64String(converted);
+            }
+
+
             if (IsAdmin())
             {
                 var recipeToRemove = this.db.RecipesConfirm.Find(id);
@@ -81,7 +87,7 @@ namespace RecipesWebApp.Controllers
                         var productToDelete = this.db.ProductsConfirm.Where(x => x.ID.ToString() == product.Value).FirstOrDefault();
                         productsToBeDeleted.Add(productToDelete);
 
-                    } 
+                    }
                 }
                 this.db.SaveChanges();
                 var newAddedProducts = new List<Product>();
@@ -97,7 +103,7 @@ namespace RecipesWebApp.Controllers
                     {
                         var pr = this.db.Products.Where(x => x.ProductName == product.Text).FirstOrDefault();
                         newAddedProducts.Add(pr);
-                    } 
+                    }
                 }
                 var newRecipe = new Recipe()
                 {
@@ -123,6 +129,7 @@ namespace RecipesWebApp.Controllers
                 this.db.SaveChanges();
             }
             return Redirect("/Admin/Index");
+            this.AddNotification("Рецептата е одобрена.", NotificationType.SUCCESS);
         }
 
         [Authorize]
@@ -158,7 +165,7 @@ namespace RecipesWebApp.Controllers
                 {
                     var context = new ApplicationDbContext();
                     AddUserToRole(context, UserSearched, RoleChange);
-                    
+
                 }
                 else
                 {
@@ -172,7 +179,7 @@ namespace RecipesWebApp.Controllers
                 if (userID != null)
                 {
                     var userRole = this.db.Roles.Where(x => x.Name == "Administrators").FirstOrDefault();
-                    
+
                     if (userID.Roles.Contains(userID.Roles.Where(x => x.RoleId == userRole.Id).FirstOrDefault()))
                     {
                         userID.Roles.Remove(userID.Roles.Where(x => x.RoleId == userRole.Id).FirstOrDefault());

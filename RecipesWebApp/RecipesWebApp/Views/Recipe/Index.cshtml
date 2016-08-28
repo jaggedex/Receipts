@@ -1,47 +1,61 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Рецепти";
 }
 
-<h2 class="text-center">РЕЦЕПТИ</h2>
+<h1 class="text-center">РЕЦЕПТИ</h1>
+<div class="row" style="height: 500px">
 
-<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 text-center category-type">
-
-    <a href='@Url.Action("ListAppetizers", "Recipe")'>
-        <div>
-            @*<text style="font-size:xx-large; text-decoration:none; color:burlywood ">Предястия</text>*@
-            <img src='@Url.Content("~/Images/appetizers-recipes.jpg" )' class="img-responsive"/>
+    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 text-center category-type">
+        <div class="thumbnail">
+            <a href='@Url.Action("ListAppetizers", "Recipe")'>
+                <h3>Предястия</h3>
+                <img src='@Url.Content("~/Images/appetizer_small.jpg")' class="img-responsive thumbnail" alt="Основни ястия" />
+                <div class="caption">
+                    <p>Предястия от нас и нашите потребители. Зарадвай близките си с нещо ✓ново, ✓вкусно и ✓бързо приготвено.</p>
+                    @Html.ActionLink("Влез", "ListAppetizers", "Recipe", null, new { @class = "btn btn-default" })
+                </div>
+            </a>
         </div>
-    </a>
-
-    @*@Html.ActionLink("Предястия", "ListAppetizers", "Recipe")*@
-
-
-</div>
-
-<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 text-center category-type">
-
-    <a href='@Url.Action("ListMainDishes", "Recipe")'>
-        <div>
-            @*<text style="font-size:xx-large; text-decoration:none; color:burlywood ">Основни ястия</text>*@
-            <img src='@Url.Content("~/Images/maindishes-recipes.jpg")' class="img-responsive" />
+    </div>
+    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 text-center category-type">
+        <div class="thumbnail">
+            <a href='@Url.Action("ListMainDishes", "Recipe")'>
+                <h3>Основни ястия</h3>
+                <img src='@Url.Content("~/Images/meal_small.jpg")' class="img-responsive thumbnail" alt="Основни ястия" />
+                <div class="caption">
+                    <p>Основни ястия от нас и нашите потребители. Зарадвай близките си с нещо ✓ново, ✓вкусно и ✓бързо приготвено.</p>
+                    @Html.ActionLink("Влез", "ListMainDishes", "Recipe", null, new { @class = "btn btn-default" })
+                </div>
+            </a>
         </div>
-    </a>
+    </div>
+    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 text-center category-type">
+        <div class="thumbnail">
+            <a href='@Url.Action("ListMainDishes", "Recipe")'>
+                <h3>Десерти</h3>
+                <img src='@Url.Content("~/Images/dessert_small.jpg")' class="img-responsive thumbnail" alt="Основни ястия" />
+                <div class="caption">
+                    <p>Десерти от нас и нашите потребители. Зарадвай близките си с нещо ✓ново, ✓вкусно и ✓бързо приготвено.</p>
+                    @Html.ActionLink("Влез", "ListDesserts", "Recipe", null, new { @class = "btn btn-default" })
 
-    @*@Html.ActionLink("Основни ястия", "ListMainDishes", "Recipe")*@
-
-</div>
-
-
-<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 text-center category-type">
-
-    <a href='@Url.Action("ListDesserts", "Recipe")'>
-        <div>
-            @*<text style="font-size:xx-large; text-decoration:none; color:burlywood ">Десерти</text>*@
-            <img src='@Url.Content("~/Images/desserts-recipes.jpg")' class="img-responsive" />
+                </div>
+            </a>
         </div>
-    </a>
+    </div>
 
-    @*@Html.ActionLink("Десерти", "ListDesserts", "Recipe")*@
 
+
+    @*<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 text-center category-type">
+
+            <a href='@Url.Action("ListDesserts", "Recipe")'>
+
+                <text style="font-size:xx-large; text-decoration:none; color:burlywood ">Десерти</text>
+                <img src='@Url.Content("~/Images/dessert_medium.jpg")' class="img-responsive thumbnail" />
+
+            </a>
+
+            @Html.ActionLink("Десерти", "ListDesserts", "Recipe")
+
+        </div>*@
 </div>

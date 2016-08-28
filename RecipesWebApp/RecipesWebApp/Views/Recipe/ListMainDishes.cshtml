@@ -9,4 +9,8 @@
 <h2>Основни ястия</h2>
 
 @Html.DisplayFor(d => d, "_RecipeView")
-@Html.PagedListPager(Model, page => Url.Action("ListMainDishes", new { page } ), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded , DisplayPageCountAndCurrentLocation = true, DisplayItemSliceAndTotal = true})
+<div class="row">
+    <div class="pull-right" style="margin-right: 20px">
+        @Html.PagedListPager(Model, page => Url.Action("ListMainDishes", new { page }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true, DisplayItemSliceAndTotal = false })
+    </div>
+</div>
