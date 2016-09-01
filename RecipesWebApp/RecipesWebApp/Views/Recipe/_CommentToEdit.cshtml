@@ -1,0 +1,16 @@
+﻿@using RecipesWebData
+@model Comment
+@using (Html.BeginForm())
+{
+    <div>
+        
+            @Html.TextBoxFor(c => c.Text, new { @class = "form-control", @style = "width: 500px", @id = "commentField" })
+        
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Промени коментар" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,50 @@
+﻿
+@using RecipesWebData
+
+@model IEnumerable<Recipe>
+@{
+    ViewBag.Title = "Детайли рецепта";
+}
+@*<ul class="nav nav-pills nav-stacked ">*@
+
+@foreach (var recipe in Model)
+{
+
+
+    <div class="well">
+        <div class="page-header-index">
+            <h3>
+                @Html.ActionLink(recipe.Title, "Details", "Recipe", new { id = recipe.ID }, new { @style="text-decoration: none"})
+            </h3>
+        </div>
+        <p style="display:inline-block; margin-top: 10px">
+
+            @{var TotalVotedSum = 0D;
+                foreach (var raiting in recipe.Ratings)
+                {
+                    TotalVotedSum += raiting.Vote;
+                }
+                var vote = Math.Round(TotalVotedSum / recipe.Ratings.Count(), 1);
+
+                if (TotalVotedSum != 0D)
+                {
+                    <text>Оценка: @vote<span>/5</span></text>
+                }
+                else
+                {
+                    <text>Оценка: 0/5</text>
+                }
+            }
+
+            @if (this.User.IsInRole("Administrators") || this.User.IsInRole("MasterAdministrators") || this.User.Identity.Name == recipe.Author.UserName)
+            {
+                <div style="float: right; margin-top: 10px">
+                    @Html.ActionLink("Промени", "Edit", "Recipe", new { id = recipe.ID, oldFoodType = recipe.Type }, new { @class = "btn btn-info btn-xs" })
+
+                    @Html.ActionLink("Изтрий", "Delete", "Recipe", new { id = recipe.ID }, new { onclick = "return confirm('Сигурни ли сте, че искате да изтриете рецептата?');", @class = "btn btn-danger btn-xs" })
+                </div>
+            }
+        </p>
+    </div>
+
+                }

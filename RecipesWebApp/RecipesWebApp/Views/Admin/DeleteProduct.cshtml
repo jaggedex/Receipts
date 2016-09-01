@@ -1,0 +1,19 @@
+﻿@model IEnumerable<RecipesWebData.Product>
+@{
+    ViewBag.Title = "Изтриване на продукти";
+}
+
+<h2 class="text-center">Изтриване на продукти</h2>
+
+<div class="row">
+    <div class="col-lg-10 col-md-offset-1" style="border: 1px solid #cccccc; border-radius: 5px; overflow-y: scroll; height:440px; background-image:url('/Images/form-background.jpg')">
+        @foreach (var prod in Model)
+        {
+            <div class="col-md-4 col-md-offset-4">
+                @Html.TextBoxFor(model => prod.ProductName)
+                @Html.ActionLink("Изтрий", "DeleteSelectedProduct", "Admin", new { productId = prod.ID }, new { @class = "btn btn-danger btn-sm" })
+                
+            </div>
+        }
+    </div>
+</div>

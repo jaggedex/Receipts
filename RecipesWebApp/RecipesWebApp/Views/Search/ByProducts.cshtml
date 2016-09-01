@@ -1,0 +1,62 @@
+﻿@using RecipesWebApp.Models
+@model RecipeInputViewModel
+
+@{
+    ViewBag.Title = "Търсене по продукти";
+}
+<h2 class="text-center">Търсене по продукти:</h2>
+<div class="container" style="background-image:url('../../Images/recipe-create-background.jpg'); border-radius: 5px;">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2" style="margin-top: 15px">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-horizontal ">
+                    <div id="custom-form">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            <div class="col-md-9 pull-right">
+                                @Html.HiddenFor(x => Model.Type)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3 labels">
+                                @Html.LabelFor(model => model.SelectProducts, htmlAttributes: new { @class = "control-label label-create-form" })
+                            </div>
+                            <div class="col-md-9 pull-right">
+                                <div style="width:500px; border: 1px solid #cccccc; border-radius: 5px; overflow-y: scroll; height:110px; background-color: white; width: 100%">
+                                    @for (int i = 0; i < Model.SelectProducts.Count(); i++)
+                                    {
+
+                                        <div class="checkbox" style="padding-left:30px">
+                                            @Html.HiddenFor(model => model.SelectProducts[i].Value)
+                                            @Html.HiddenFor(model => model.SelectProducts[i].Text)
+                                            @Html.CheckBoxFor(model => model.SelectProducts[i].Selected)
+                                            <span>@Html.DisplayFor(model => model.SelectProducts[i].Text)</span>
+                                        </div>
+
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-2">
+                                <input type="submit" value="Търсене" class="btn btn-success pull-right" />
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div>
+                    </div>
+                    <a href="@Url.Action("Index")" class="btn btn-default pull-right">
+                        <span class="glyphicon glyphicon-arrow-left"></span>
+                        Обратно към категории
+                    </a>
+                </div>
+               
+            }
+            @*@Html.ActionLink("Обратно към категории", "Index", null, new { @class = "btn btn-default" })*@
+        </div>
+    </div>
+</div>
