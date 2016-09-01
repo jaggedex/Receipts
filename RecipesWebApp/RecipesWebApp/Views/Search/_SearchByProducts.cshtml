@@ -2,16 +2,17 @@
 @model RecipeInputViewModel
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Търсене по продукти";
 }
-<h2 class="text-center">Търсачката</h2>
+<h2 class="text-center">Търсене по продукти:</h2>
+<div class="container">
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
         <div id="custom-form">
-            <hr />
+       
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             <div>@Html.HiddenFor(x => Model.Type)</div>
             <div class="form-group">
@@ -39,8 +40,9 @@
         </div>
     </div>
 }
-<div>
-    @Html.ActionLink("Обратно към категории", "Index")
+    <div>
+</div>
+    @Html.ActionLink("Обратно към категории", "Index", null, new { @class="btn btn-default"})
 </div>
 
 

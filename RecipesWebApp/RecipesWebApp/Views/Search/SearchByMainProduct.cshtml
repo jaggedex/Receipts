@@ -4,8 +4,8 @@
     ViewBag.Title = "Търсене по основен продукт";
 }
 
-<h2>Рецепти по един избран основен продукт:</h2>
-<div>
+<h2 class="text-center">Рецепти по един избран основен продукт:</h2>
+<div class="text-center">
     @if (Model.MatchedByOneProduct.Count() != 0)
     {
         @Html.DisplayFor(x => x.MatchedByOneProduct)

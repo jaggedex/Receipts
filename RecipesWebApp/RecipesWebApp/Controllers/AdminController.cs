@@ -7,6 +7,7 @@ using RecipesWebData;
 using RecipeWebData;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -19,10 +20,44 @@ namespace RecipesWebApp.Controllers
         public ActionResult Index(int? page)
         {
             var allRecipes = this.db.RecipesConfirm.ToList().ToPagedList(page ?? 1, 5);
+            var AllUsers = this.db.Users.Include(x => x.Roles);
+            var adminRoleId = this.db.Roles.Where(x => x.Name == "Administrators").FirstOrDefault();
+            var administrators = new List<string>();
+            foreach (var admin in AllUsers)
+            {
+                foreach (var role in admin.Roles)
+                {
+                    if (role.RoleId == adminRoleId.Id )
+                    {
+                        administrators.Add(admin.UserName);
+                    }
+                }
+            }            
 
+            ViewBag.Administrators = administrators;
             return View(allRecipes);
         }
 
+        public ActionResult DeleteProduct()
+        {
+            var products = this.db.Products;
+            
+            return View(products);
+        }
+        [Authorize(Roles = "Administrators, MasterAdministrators")]
+        public ActionResult DeleteSelectedProduct(int productId)
+        {
+           
+            var productToDelete = this.db.Products.Where(x => x.ID == productId).FirstOrDefault();
+            if (productToDelete != null)
+            {
+                this.db.Products.Remove(productToDelete);
+                this.AddNotification("Продукта е изтрит успешно.", NotificationType.SUCCESS);
+                db.SaveChanges();
+            }
+            
+            return Redirect("/Admin/DeleteProduct");
+        }
         public ActionResult Confirm(int id)
         {
             var recipe = this.db.RecipesConfirm.Find(id);
@@ -51,6 +86,7 @@ namespace RecipesWebApp.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Confirm(int id, RecipeViewModel model, string ChoosenFile)
         {
             byte[] image = null;
@@ -92,11 +128,15 @@ namespace RecipesWebApp.Controllers
                 this.db.SaveChanges();
                 var newAddedProducts = new List<Product>();
                 var oldProducts = new List<Product>();
-                foreach (var pr in model.Products)
+                if (model.Products != null)
                 {
-                    var product = this.db.Products.Find(int.Parse(pr.Value));
-                    oldProducts.Add(product);
+                    foreach (var pr in model.Products)
+                    {
+                        var product = this.db.Products.Find(int.Parse(pr.Value));
+                        oldProducts.Add(product);
+                    }
                 }
+
                 if (model.ProductsConfirm != null)
                 {
                     foreach (var product in model.ProductsConfirm)
@@ -128,8 +168,9 @@ namespace RecipesWebApp.Controllers
                 this.db.RecipesConfirm.Remove(recipeToRemove);
                 this.db.SaveChanges();
             }
-            return Redirect("/Admin/Index");
             this.AddNotification("Рецептата е одобрена.", NotificationType.SUCCESS);
+            return Redirect("/Admin/Index");
+            
         }
 
         [Authorize]
@@ -148,7 +189,9 @@ namespace RecipesWebApp.Controllers
                 this.db.SaveChanges();
                 this.AddNotification("Рецептата не беше одобрена.", NotificationType.SUCCESS);
             }
+           
             return Redirect("/Admin/Index");
+            
         }
 
         public ActionResult ChangeRoles()
@@ -158,44 +201,53 @@ namespace RecipesWebApp.Controllers
         [HttpPost]
         public ActionResult ChangeRoles(string UserSearched, string RoleChange)
         {
+            var userRoleMaster = this.db.Roles.Where(x => x.Name == "MasterAdministrators").FirstOrDefault();
             var userID = this.db.Users.Where(x => x.UserName == UserSearched).FirstOrDefault();
-            if (RoleChange == "Administrators")
+            if (userID != null && !userID.Roles.Contains(userID.Roles.Where(x => x.RoleId == userRoleMaster.Id).FirstOrDefault()))
             {
-                if (userID != null)
+                
+                if (RoleChange == "Administrators")
                 {
-                    var context = new ApplicationDbContext();
-                    AddUserToRole(context, UserSearched, RoleChange);
+                    if (userID != null)
+                    {
+                        var context = new ApplicationDbContext();
+                        AddUserToRole(context, UserSearched, RoleChange);
 
+                    }
+                    else
+                    {
+                        Redirect("/Admin/Index");
+                        this.AddNotification("Потребителя не съществува!", NotificationType.ERROR);
+                    }
                 }
                 else
                 {
-                    Redirect("/Admin/Index");
-                    this.AddNotification("Потребителя не съществува!", NotificationType.ERROR);
+
+                    if (userID != null)
+                    {
+                        var userRole = this.db.Roles.Where(x => x.Name == "Administrators").FirstOrDefault();
+
+                        if (userID.Roles.Contains(userID.Roles.Where(x => x.RoleId == userRole.Id).FirstOrDefault()))
+                        {
+                            userID.Roles.Remove(userID.Roles.Where(x => x.RoleId == userRole.Id).FirstOrDefault());
+                            this.AddNotification("Статуса е променен.", NotificationType.SUCCESS);
+                        }
+                        else
+                        {
+                            this.AddNotification("Статуса не е променен.", NotificationType.WARNING);
+                        }
+
+                    }
+                    else
+                    {
+                        Redirect("/Admin/Index");
+                        this.AddNotification("Потребителя не съществува!", NotificationType.ERROR);
+                    }
                 }
             }
             else
             {
-
-                if (userID != null)
-                {
-                    var userRole = this.db.Roles.Where(x => x.Name == "Administrators").FirstOrDefault();
-
-                    if (userID.Roles.Contains(userID.Roles.Where(x => x.RoleId == userRole.Id).FirstOrDefault()))
-                    {
-                        userID.Roles.Remove(userID.Roles.Where(x => x.RoleId == userRole.Id).FirstOrDefault());
-                        this.AddNotification("Статуса е променен.", NotificationType.SUCCESS);
-                    }
-                    else
-                    {
-                        this.AddNotification("Статуса не е променен.", NotificationType.WARNING);
-                    }
-
-                }
-                else
-                {
-                    Redirect("/Admin/Index");
-                    this.AddNotification("Потребителя не съществува!", NotificationType.ERROR);
-                }
+                this.AddNotification("Статуса не е променен.", NotificationType.WARNING);
             }
             this.db.SaveChanges();
             return Redirect("/Admin/Index");

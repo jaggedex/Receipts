@@ -2,6 +2,7 @@
 using RecipesWebData;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -22,7 +23,7 @@ namespace RecipesWebApp.Controllers
         [HttpGet]
         public ActionResult SearchByProducts(string type)
         {
-            var products = this.db.Products.Select(p => new SelectListItem()
+            var products = this.db.Products.OrderBy(x =>x.ProductName).Select(p => new SelectListItem()
             {
                 Text = p.ProductName,
                 Value = p.ID.ToString(),
@@ -32,8 +33,9 @@ namespace RecipesWebApp.Controllers
             var desiredProducts = new RecipeInputViewModel()
             {
                 SelectProducts = products,
+                Type = type
             };
-            return this.PartialView("_SearchByProducts", desiredProducts);
+            return View("ByProducts", desiredProducts);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -41,7 +43,7 @@ namespace RecipesWebApp.Controllers
         {
             var matchedRecipeWithoutOne = new List<Recipe>();
             var matchedRecipes = new List<Recipe>();
-            var recipes = this.db.Recipes.Where(y => y.Type == model.Type);
+            var recipes = this.db.Recipes.Include(a => a.Author).Where(y => y.Type == model.Type);
 
             var prdsList = new List<string>(); 
 
@@ -77,7 +79,7 @@ namespace RecipesWebApp.Controllers
                     matchedRecipes.Add(recipe);
                 }
 
-                if (counter == recipe.Products.Count() - 1)
+                if (counter == recipe.Products.Count() - 1 && counter!=0)
                 {
                     matchedRecipeWithoutOne.Add(recipe);
                 }
@@ -90,14 +92,15 @@ namespace RecipesWebApp.Controllers
         public ActionResult SearchByMainProduct(string type)
         {
             var desire = new RecipeInputViewModel() { Type  = type}; 
-            return this.PartialView("_SearchByMainProduct", desire);
+            return View("ByMainProduct", desire);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult SearchByMainProduct(RecipeInputViewModel model, string searchByProduct)
         {
-            var recipes = this.db.Recipes.Where(y => y.Type == model.Type);
+            var recipes = this.db.Recipes.Include(a =>a.Author).Where(y => y.Type == model.Type);
             var prdsList = new List<string>();
             var matchedByOneProduct = new List<Recipe>();
 
@@ -105,9 +108,9 @@ namespace RecipesWebApp.Controllers
             {
                 foreach (var prod in recipe.Products)
                 {
-                    prdsList.Add(prod.ProductName);
+                    prdsList.Add(prod.ProductName.ToLower());
                 }
-                if (prdsList.Contains(searchByProduct))
+                if (prdsList.Contains(searchByProduct.ToLower()))
                 {
                     matchedByOneProduct.Add(recipe);
                 }
@@ -115,6 +118,24 @@ namespace RecipesWebApp.Controllers
             }
 
             return View(new SearchViewModel { MatchedByOneProduct = matchedByOneProduct });
+        }
+        [ValidateInput(false)]
+        public ActionResult SearchByTitle(string searchingPhrase)
+        {
+            var matchingRecipesByTitle = new List<Recipe>();
+            if (!string.IsNullOrEmpty(searchingPhrase))
+            {
+                var allRecipes = this.db.Recipes.Include(a => a.Author);
+                foreach (var recipe in allRecipes)
+                {
+
+                    if (recipe.Title.ToLower().Contains(searchingPhrase.ToLower()))
+                    {
+                        matchingRecipesByTitle.Add(recipe);
+                    }
+                }
+            }
+            return View(matchingRecipesByTitle);
         }
     }
 }

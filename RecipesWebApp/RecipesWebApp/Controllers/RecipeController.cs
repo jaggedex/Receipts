@@ -12,6 +12,7 @@ using RecipesWebApp.Extensions;
 using RecipeWebData;
 using PagedList;
 using PagedList.Mvc;
+using System.Data.Entity;
 
 namespace RecipesWebApp.Controllers
 {
@@ -25,20 +26,20 @@ namespace RecipesWebApp.Controllers
 
         public ActionResult ListAppetizers(int? page)
         {
-            var appetizers = this.db.Recipes.Where(a => a.Type == "Предястие").OrderByDescending(x => x.Date).ToList().ToPagedList(page ?? 1, 5);
+            var appetizers = this.db.Recipes.Include(r => r.Author).Where(a => a.Type == "Предястие").OrderByDescending(x => x.Date).ToList().ToPagedList(page ?? 1, 5);
             return View(appetizers);
 
         }
 
         public ActionResult ListMainDishes(int? page)
         {
-            var mainDishes = this.db.Recipes.Where(a => a.Type == "Основно ястие").OrderByDescending(x => x.Date).ToList().ToPagedList(page ?? 1, 5);
+            var mainDishes = this.db.Recipes.Include(r => r.Author).Where(a => a.Type == "Основно ястие").OrderByDescending(x => x.Date).ToList().ToPagedList(page ?? 1, 5);
             return View(mainDishes);
         }
 
         public ActionResult ListDesserts(int? page)
         {
-            var desserts = this.db.Recipes.Where(a => a.Type == "Десерт").OrderByDescending(x => x.Date).ToList().ToPagedList(page ?? 1, 5);
+            var desserts = this.db.Recipes.Include(r => r.Author).Where(a => a.Type == "Десерт").OrderByDescending(x => x.Date).ToList().ToPagedList(page ?? 1, 5);
             return View(desserts);
         }
         [Authorize]
@@ -57,6 +58,7 @@ namespace RecipesWebApp.Controllers
 
         [Authorize]
         [HttpPost]
+        [ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult Create(RecipeInputViewModel model, HttpPostedFileBase ChoosenFile)
         {
@@ -99,15 +101,15 @@ namespace RecipesWebApp.Controllers
                     }
                 }
                 // TODO ДА СЕ СЪЗДАВА В МЕЖДИННА ТАБЛИЦА ОТ КОЯТО АДМИНА ДА ГИ ПРЕХВЪРЛЯ !!!!
-                var unencoded = model.Description;
-                var encoded = HttpUtility.HtmlEncode(unencoded);
+                //var unencoded = model.Description;
+                //var encoded = HttpUtility.HtmlEncode(unencoded);
                 
                 var newRecipe = new RecipeConfirm()
                 
                 {
                     AuthorId = this.User.Identity.GetUserId(),
                     Title = model.Title,
-                    Description = encoded,
+                    Description = model.Description,
                     Type = model.Type,
                     Products = selectedProducts,
                     ProductsConfirm = newConfirmProduct,
@@ -130,9 +132,8 @@ namespace RecipesWebApp.Controllers
         }
         public ActionResult Details(int id)
         {
-            var recipe = this.db.Recipes.Where(x => x.ID == id).Select(RecipeInputViewModel.ViewModel).FirstOrDefault();
+            var recipe = this.db.Recipes.Include(p => p.Author).Where(x => x.ID == id).Select(RecipeInputViewModel.ViewModel).FirstOrDefault();
             recipe.CurrentUserId = this.User.Identity.GetUserId();
-            recipe.User = this.User.Identity.GetUserName();
             return View(recipe);
         }
 
@@ -160,7 +161,8 @@ namespace RecipesWebApp.Controllers
         public ActionResult Delete(int id)
         {
             var recipeToDelete = this.db.Recipes.Find(id);
-
+            recipeToDelete.Comments.Clear();
+            this.db.SaveChanges();
             if (recipeToDelete == null)
             {
                 return HttpNotFound();
@@ -197,7 +199,6 @@ namespace RecipesWebApp.Controllers
                     }
                 }
             }
-
             recipeToEdit.SelectProducts = products;
             if (this.User.Identity.GetUserId() == recipeToEdit.AuthorId || IsAdmin())
             {
@@ -214,29 +215,96 @@ namespace RecipesWebApp.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(/*[Bind(Include ="Products,SelectProducts,Title,Description,Type,Date,AuthorId")]*/RecipeInputViewModel model)
+        public ActionResult Edit(RecipeInputViewModel model, HttpPostedFileBase ChoosenFile)
         {
             var editedRecipe = this.db.Recipes.Find(model.Id);
 
-            var selectedProducts = new List<Product>();
-            foreach (var product in model.SelectProducts)
+            if (model != null && this.ModelState.IsValid)
             {
-                if (product.Selected && product.Value != null && product.Text != null)
+                if (ChoosenFile != null)
                 {
-                    var pr = this.db.Products.Where(prd => prd.ID.ToString() == product.Value).FirstOrDefault();
-                    selectedProducts.Add(pr);
+                    model.Image = new byte[ChoosenFile.ContentLength];
+                    ChoosenFile.InputStream.Read(model.Image, 0, ChoosenFile.ContentLength);
+                }
+                var newProductsName = new List<string>();
+                var newConfirmProduct = new List<ProductsConfirm>();
+                if (model.newProduct != null)
+                {
+
+                    newProductsName = model.newProduct.Split(new char[] { '&' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+                    foreach (var pr in newProductsName)
+                    {
+                        var prod = new ProductsConfirm() { ProductName = pr };
+                        this.db.ProductsConfirm.Add(prod);
+
+                    }
+                    this.db.SaveChanges();
+
+                    foreach (var pr in newProductsName)
+                    {
+                        var selectedNewProducts = this.db.ProductsConfirm.Where(x => x.ProductName == pr).FirstOrDefault();
+                        newConfirmProduct.Add(selectedNewProducts);
+                    }
+
+                }
+                var selectedProducts = new List<Product>();
+                foreach (var product in model.SelectProducts)
+                {
+                    if (product.Selected && product.Value != null && product.Text != null)
+                    {
+                        var pr = this.db.Products.Where(prd => prd.ID.ToString() == product.Value).FirstOrDefault();
+                        selectedProducts.Add(pr);
+                    }
+                }
+       
+                var newRecipe = new RecipeConfirm()
+
+                {
+                    AuthorId = editedRecipe.AuthorId,
+                    Title = model.Title,
+                    Description = model.Description,
+                    Type = model.Type,
+                    Products = selectedProducts,
+                    ProductsConfirm = newConfirmProduct,
+                    Image = model.Image
+                };
+                this.db.RecipesConfirm.Add(newRecipe);
+                this.db.SaveChanges();
+                editedRecipe.Comments.Clear(); //new
+                this.db.Recipes.Remove(editedRecipe); //new
+                this.db.SaveChanges(); //new
+                
+
+                this.AddNotification("Рецептата предстои да бъде одобрена от администратор.", NotificationType.SUCCESS);
+                switch (model.Type)
+                {
+                    case "Предястие":
+                        return Redirect("~/Recipe/ListAppetizers");
+                    case "Основно ястие":
+                        return Redirect("~/Recipe/ListMainDishes");
+                    case "Десерт":
+                        return Redirect("~/Recipe/ListDesserts");
                 }
             }
-            editedRecipe.Products.Clear();
-            editedRecipe.Title = model.Title;
-            editedRecipe.Description = model.Description;
-            editedRecipe.Type = model.Type;
-            editedRecipe.Products = selectedProducts;
-            editedRecipe.Date = DateTime.Now;
-            editedRecipe.AuthorId = this.User.Identity.GetUserId();
+            //var selectedProducts = new List<Product>();
+            //foreach (var product in model.SelectProducts)
+            //{
+            //    if (product.Selected && product.Value != null && product.Text != null)
+            //    {
+            //        var pr = this.db.Products.Where(prd => prd.ID.ToString() == product.Value).FirstOrDefault();
+            //        selectedProducts.Add(pr);
+            //    }
+            //}
+            //editedRecipe.Products.Clear();
+            //editedRecipe.Title = model.Title;
+            //editedRecipe.Description = model.Description;
+            //editedRecipe.Type = model.Type;
+            //editedRecipe.Products = selectedProducts;
+            //editedRecipe.Date = DateTime.Now;
+            //editedRecipe.AuthorId = this.User.Identity.GetUserId();
 
-            this.db.SaveChanges();
-            this.AddNotification("Вие променихте успешно вашата рецепта.", NotificationType.SUCCESS);
+
+            
 
             return Redirect("/Recipe/Details/" + model.Id);
         }
@@ -248,8 +316,11 @@ namespace RecipesWebApp.Controllers
 
         [Authorize]
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult AddComment(string CommentText, int id)
         {
+            if (CommentText != "")
+            {
             var newComment = new Comment()
             {
                 Text = CommentText,
@@ -257,18 +328,47 @@ namespace RecipesWebApp.Controllers
                 AuthorName = this.User.Identity.GetUserName()
             };
             this.db.SaveChanges();
-
             var recipeToAddComment = this.db.Recipes.Find(id);
             recipeToAddComment.Comments.Add(newComment);
-            this.db.SaveChanges();
             this.AddNotification("Коментарът ви е добавен успешно.", NotificationType.SUCCESS);
+            this.db.SaveChanges();
+            }
+            else
+            {
+                this.AddNotification("Не можете да добавите празен коментар.", NotificationType.WARNING);
+            }
             return Redirect("/Recipe/Details/" + id);
         }
 
+        public ActionResult CommentToDelete(int id, int recipeId)
+        {
+            var commentToDelete = this.db.Comments.Find(id);
+            this.db.Comments.Remove(commentToDelete);
+            this.db.SaveChanges();
+            this.AddNotification("Коментарът ви е добавен успешно.", NotificationType.INFO);
+           
+            return Redirect("/Recipe/Details/" + recipeId);
+        }
+
+        public ActionResult CommentToEdit(int id, int recipeId)
+        {
+            var commentToEdit = this.db.Comments.Find(id);
+            return PartialView("_CommentToEdit" , commentToEdit);
+        }
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult CommentToEdit(Comment CommentToEdit, int Id, int recipeId)
+        {
+            var commentToEdit = this.db.Comments.Find(Id);
+            commentToEdit.Text = CommentToEdit.Text;
+            this.db.SaveChanges();
+            this.AddNotification("Коментарът ви е променен успешно.", NotificationType.INFO);
+            return Redirect("/Recipe/Details/" + recipeId);
+        }
         public ActionResult My(int? page)
         {
             var currentUser = this.User.Identity.GetUserId();
-            var myRecipes = this.db.Recipes.Where(x => x.AuthorId == currentUser).ToList();
+            var myRecipes = this.db.Recipes.Include(a => a.Author).Where(x => x.AuthorId == currentUser).ToList();
             var pagedMyRecipes = myRecipes.ToPagedList(page ?? 1, 5);
             return View(pagedMyRecipes);
         }

@@ -523,7 +523,6 @@
     <Compile Include="Models\RecipeInputViewModel.cs" />
     <Compile Include="Models\RecipeViewModel.cs" />
     <Compile Include="Models\SearchViewModel.cs" />
-    <Compile Include="Models\zzzzzzzzzController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -531,7 +530,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\PagedList.css" />
-    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -549,6 +547,8 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.placeholder.js" />
     <Content Include="Scripts\jquery.placeholder.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -615,11 +615,16 @@
     <Content Include="Views\Admin\Confirm.cshtml" />
     <Content Include="Views\Recipe\My.cshtml" />
     <Content Include="Views\Admin\_ChangeUsersRoles.cshtml" />
+    <Content Include="Views\Search\SearchByTitle.cshtml" />
+    <Content Include="Views\Recipe\_CommentToEdit.cshtml" />
+    <Content Include="Views\Search\ByProducts.cshtml" />
+    <Content Include="Views\Search\ByMainProduct.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\_IndexRecipeView.cshtml" />
+    <Content Include="Views\Admin\DeleteProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Base\" />
-    <Folder Include="Views\zzzzzzzzz\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

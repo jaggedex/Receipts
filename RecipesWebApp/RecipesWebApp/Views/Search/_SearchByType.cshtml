@@ -1,18 +1,51 @@
-﻿<div id="0">
-    @Ajax.ActionLink("Търси по продукти", "SearchByProducts", "Search", new { type = Model }, new AjaxOptions
-{
-    InsertionMode = InsertionMode.Replace,
-    UpdateTargetId = "0"
-}, new { @class = "btn btn-default" })
+﻿<div class="row">
+    <div id="search">
+        <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 text-center category-type">
+            <div class="thumbnail">
+                <a href='@Url.Action("SearchByProducts", "Search", new { type = Model.Type })'>
+                    <h3>Търсене по набор от продукти</h3>
+                    <img src='@Url.Content("~/Images/food1-products_medium.jpg")' class="img-responsive thumbnail" alt="Търсене по набор от продукти" />
+                    <div class="caption">
+                        <p>Ястия от нас и нашите потребители. Потърси ястие по продукти с който разполагате или обичате.</p>
+                        @Html.ActionLink("Търси", "SearchByProducts", "Search", new { type = Model.Type }, new { @class = "btn btn-default" })
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 text-center category-type">
+            <div class="thumbnail">
+                <a href='@Url.Action("SearchByMainProduct", "Search", new { type = Model.Type })'>
+                    <h3>Търсене по основен продукт</h3>
+                    <img src='@Url.Content("~/Images/food3-product_medium.jpg")' class="img-responsive thumbnail" alt="Търсене по основен продукт" />
+                    <div class="caption">
+                        <p>Ястия от нас и нашите потребители. Потърси ястие по основен продукт с който разполагате или обичате.</p>
+                        @Html.ActionLink("Търси", "SearchByMainProduct", "Search", new { type = Model.Type }, new { @class = "btn btn-default" })
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div id="1">
-    @Ajax.ActionLink("Търси по основен продукт", "SearchByMainProduct", "Search", new { type = Model }, new AjaxOptions
-{
-    InsertionMode = InsertionMode.Replace,
-    UpdateTargetId = "1"
-}, new { @class = "btn btn-default" })
-</div>
+
+
+@*<div id="search" style="height: 300px">
+    <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12 text-center" style="height: 50%; vertical-align: middle">
+        @Ajax.ActionLink("Търси по продукти", "SearchByProducts", "Search", new { type = Model }, new AjaxOptions
+   {
+       InsertionMode = InsertionMode.Replace,
+       UpdateTargetId = "search"
+   }, new { @class = "btn btn-block",  @style = "height: 100%; vertical-align: middle; text-align: center; background-color: #008CBA;" })
+    </div>
+
+    <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12 text-center" style="height: 50%">
+        @Ajax.ActionLink("Търси по основен продукт", "SearchByMainProduct", "Search", new { type = Model }, new AjaxOptions
+   {
+       InsertionMode = InsertionMode.Replace,
+       UpdateTargetId = "search"
+   }, new { @class = "btn btn-block recipe-btn-search"})
+    </div>
+    </div>*@
 
 
 

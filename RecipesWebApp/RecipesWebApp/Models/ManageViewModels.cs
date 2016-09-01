@@ -49,7 +49,7 @@ namespace RecipesWebApp.Models
         [Required]
         [StringLength(100, ErrorMessage = "Паролата {0} трябва да бъде поне {2} символа.", MinimumLength = 3)]
         [DataType(DataType.Password)]
-        [Display(Name = "New password")]
+        [Display(Name = "Нова парола")]
         public string NewPassword { get; set; }
 
         [DataType(DataType.Password)]

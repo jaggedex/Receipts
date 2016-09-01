@@ -1,71 +1,156 @@
-﻿@using RecipesWebApp.Models
+﻿
+@using RecipesWebApp.Models
 @model RecipeInputViewModel
-
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Промени";
 }
-<h2 class="text-center">Редакция</h2>
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
+<h2 class="text-center">ПРОМЕНИ РЕЦЕПТА</h2>
+<div class="container" style="background-image:url('../../Images/recipe-create-background.jpg'); border-radius: 5px;">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            @using (Html.BeginForm("Edit", "Recipe", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal", role = "form", @style = "margin-top: 15px" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
 
-
-
-    <div class="form-horizontal">
-        <div id="custom-form">
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2 label-create-form", @style = "display: inline-block; text-align: right" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control", @style = "width: 500px" } })
-                    @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <div class="col-md-3 labels">
+                        @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label  label-create-form" })
+                    </div>
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control input-group-lg", @style = "width: 100%", placeholder = "Име на рецепта" } })
+                        <strong>@Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger", @style = "color: black" })</strong>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2 label-create-form", @style = "display: inline-block; text-align: right" })
-                <div class="col-md-10">
-                    @Html.TextAreaFor(model => model.Description, 10, 80, new { htmlAttributes = new { @class = "form-control", @style = "width: 500px" } })
-                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <div class="col-md-3 labels">
+                        @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label label-create-form" })
+                    </div>
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control", @rows = 15 } });
+                        <strong>@Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger", @style = "color: black" })</strong>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2 label-create-form", @style = "display: inline-block; text-align: right" })
-                <div class="col-md-10">
-                    @Html.DropDownListFor(model => model.Type,
+                    <div class="form-group">
+                        <div class="col-md-3 labels">
+                            @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label label-create-form" })
+                        </div>
+                        <div class="col-md-9">
+                            @Html.DropDownListFor(model => model.Type,
                             new List<SelectListItem> {
                                 new SelectListItem {Text = "Предястие", Value="Предястие" },
                                 new SelectListItem {Text = "Основно ястие", Value="Основно ястие" },
-                                new SelectListItem {Text = "Десерт", Value="Десерт" } }, "--Избери категория--", new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger", @style = "width: 500px" })
-                </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(model => model.SelectProducts, htmlAttributes: new { @class = "control-label col-md-2 label-create-form", @style = "display: inline-block; text-align: right" })
-                <div class="col-md-10">
-                    <div style="width:500px; border: 1px solid #cccccc; border-radius: 5px; overflow-y: scroll; height:110px">
-                        @for (int i = 0; i < Model.SelectProducts.Count(); i++)
-                {
-
-                            <div class="checkbox" style="padding-left:30px">
-                                @Html.HiddenFor(model => model.SelectProducts[i].Text)
-                                @Html.HiddenFor(model => model.SelectProducts[i].Value)
-                                @Html.CheckBoxFor(model => model.SelectProducts[i].Selected)
-                                <span>@Html.DisplayFor(model => model.SelectProducts[i].Text)</span>
-                            </div>
-
-                        }
+                                new SelectListItem {Text = "Десерт", Value="Десерт" } }, "--Избери категория--", new { @class = "form-control input-group-lg text-center", @style = "text-align: center" })
+                            <strong>@Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger", @style = "width: 500px; color: black" })</strong>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Промени" class="btn btn-default" />
-                </div>
+                    <div class="form-group">
+                        <div class="col-md-3 labels">
+                            @Html.LabelFor(model => model.SelectProducts, htmlAttributes: new { @class = "control-label label-create-form" })
+                        </div>
+                        <div class="col-md-9">
+                            <div style="width:100%; border: 1px solid #cccccc; border-radius: 5px; overflow-y: scroll; height:110px; background-color:white">
+                                @for (int i = 0; i < Model.SelectProducts.Count(); i++)
+                                {
+
+                                    <div class="checkbox" style="padding-left:30px">
+                                        @Html.HiddenFor(model => model.SelectProducts[i].Value)
+                                        @Html.HiddenFor(model => model.SelectProducts[i].Text)
+                                        @Html.CheckBoxFor(model => model.SelectProducts[i].Selected)
+                                        <span>@Html.DisplayFor(model => model.SelectProducts[i].Text)</span>
+                                    </div>
+                                }
+                            </div>
+                            <strong>@Html.ValidationMessageFor(model => model.SelectProducts, "", new { @class = "text-danger", @style = "width: 500px; color: black" })</strong>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3 labelsDeffected">
+                            @Html.Label("Въведи нов продукт")
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-group">
+                                @Html.TextBox("ProductName", null, new { @id = "productText", @class = "form-control", @style = "width: 100%", placeholder = "Въведи нов продукт" })
+                                <span class="input-group-btn">
+                                    <button onclick="addItem()" id="addProduct" type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> Добави</button>
+                                </span>
+                            </div>
+                            <div col-md-offset-2">
+                                <ul id="productsList" style="background-color:white"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    @Html.HiddenFor(x => x.newProduct, new { @id = "newProducts" })
+                    
+                   
+                    <div class="form-group">
+                        <div class="col-md-3 labelsDeffected">
+                            @Html.Label("Избери снимка")
+                        </div>
+                        <div class="col-md-9">
+                            <input type="file" name="ChoosenFile" class="file">
+                            <div class="input-group col-xs-12 input-file-margin">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+                                <input type="text" class="form-control" disabled placeholder="Избери снимка">
+                                <span class="input-group-btn">
+                                    <button class="browse btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i> Избери</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    @*<div class="form-group">
+                            <div class="col-md-3 labelsDeffected">
+                                @Html.Label("Избери снимка")
+                            </div>
+                            <div class="col-md-9">
+                                <input type="file" id="asd" name="ChoosenFile" value="Избери снимка"/>
+                            </div>
+                        </div>*@
+
+
+                    <div class="form-group ">
+                        <div class="col-md-offset-2 col-md-10 ">
+
+                            <input type="submit" value="Промени" class="btn btn-success pull-right" />
+                        </div>
+                    </div>
+
+            }
+            <div>
+                <a href="@Url.Action("Index")" class="btn btn-default pull-right">
+                    <span class="glyphicon glyphicon-arrow-left"></span>
+                    Обратно към категории
+                </a>
+                @*@Html.ActionLink("Обратно към категории", "Index", null, new {@class= "btn btn-default pull-right" })*@
+                <br />
+                <br />
             </div>
         </div>
     </div>
-}
-<div>
-    @Html.ActionLink("Back to List", "Index")
 </div>
+<script>
+    function addItem() {
+        let text = $('#productText').val();
+        addItemToLIst(text);
+        $('#productText').val('');
+        let input = $('#newProducts')
+        input.val(input.val() + text + '&');
+    }
+    function addItemToLIst(text) {
+        let li = $('<li>')
+        .append($("<span>").text(text));
+        $('#productsList').append(li);
+    }
+</script>
+
+<script>
+    $(document).on('click', '.browse', function () {
+        var file = $(this).parent().parent().parent().find('.file');
+        file.trigger('click');
+    });
+    $(document).on('change', '.file', function () {
+        $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
+    });
+</script>
+

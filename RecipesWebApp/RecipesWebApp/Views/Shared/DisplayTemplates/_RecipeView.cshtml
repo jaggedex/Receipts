@@ -3,50 +3,82 @@
 
 @model IEnumerable<Recipe>
 @{
-    ViewBag.Title = "ReceiptsView";
+    ViewBag.Title = "Детайли рецепта";
 }
-<ul class="nav nav-pills nav-stacked">
-    
-    @foreach (var item in Model)
-    {
+@*<ul class="nav nav-pills nav-stacked ">*@
+
+@foreach (var recipe in Model)
+{
 
 
-        <li>
-            @Html.ActionLink(item.Title, "Details", "Recipe", new { id = item.ID }, null)
+    <div class="well">
+        <div class="page-header">
+            <h3>
+                @Html.ActionLink(recipe.Title, "Details", "Recipe", new { id = recipe.ID }, new { @style = "text-decoration: none" })
+                @*<small>@recipe.Type</small>*@
+            </h3>
+        </div>
 
-        <p>
+        <p class="lead">
+        @{
+            var count = 0;
+            if (recipe.Description.Length < 147)
+            {
+                count = recipe.Description.Length;
+            }
+            else
+            {
+                count = 147;
+            }
+            var descriptionSubstr = recipe.Description.Substring(0, count);
+            if (recipe.Description.Length > 147)
+            {
+                descriptionSubstr += "...";
+            }
 
+        }
+        @descriptionSubstr
+            @Html.ActionLink("Още", "Details", "Recipe", new { id=recipe.ID}, new { @class = "btn btn-link" })
+        </p>
+        @*<div class="pull-right">
+            @Html.ActionLink("Още", "ExtendDescription", null, new { @class = "btn btn-default btn-small" })
+        </div>*@
+        @*<h4>
+                @Html.ActionLink(recipe.Title, "Details", "Recipe", new { id = recipe.ID }, null)
+            </h4>*@
+        <p style="display:inline-block; margin-top: 10px" class="lead">
 
-            
-                @{var TotalVotedSum = 0D;
-                    foreach (var itm in item.Ratings)
-                    {
-                        TotalVotedSum += itm.Vote;
-                    }
-                    var vote = Math.Round(TotalVotedSum / item.Ratings.Count(), 1);
-
-                    if (TotalVotedSum != 0D)
-                    {
-                        <text>Оценка: @vote<span>/5</span></text>
-                    }
-                    else
-                    {
-                        <text>Оценка: 0/5</text>
-                    }
+            @{var TotalVotedSum = 0D;
+                foreach (var raiting in recipe.Ratings)
+                {
+                    TotalVotedSum += raiting.Vote;
                 }
-          
+                var vote = Math.Round(TotalVotedSum / recipe.Ratings.Count(), 1);
+
+                if (TotalVotedSum != 0D)
+                {
+                    <text>Оценка: @vote<span>/5</span></text>
+                }
+                else
+                {
+                    <text>Оценка: 0/5</text>
+                }
+            }
+
 
             @*//TODO a little part of description !*@
 
+
+
+            @if (this.User.IsInRole("Administrators") || this.User.IsInRole("MasterAdministrators") || this.User.Identity.Name == recipe.Author.UserName)
+            {
+                <div style="float: right; margin-top: 10px">
+                    @Html.ActionLink("Промени", "Edit", "Recipe", new { id = recipe.ID, oldFoodType = recipe.Type }, new { @class = "btn btn-info btn-sm" })
+
+                    @Html.ActionLink("Изтрий", "Delete", "Recipe", new { id = recipe.ID }, new { onclick = "return confirm('Сигурни ли сте, че искате да изтриете рецептата?');", @class = "btn btn-danger btn-sm" })
+                </div>
+            }
         </p>
-            <p>
-                @*@if (Roles.IsUserInRole("Administrators") || Roles.IsUserInRole("MasterAdministrators"))
-            {*@
-                @Html.ActionLink("Промени", "Edit", "Recipe", new { id = item.ID, oldFoodType = item.Type }, new { @class="btn btn-default btn-xs"})
+    </div>
 
-                @Html.ActionLink("Изтрий", "Delete", "Recipe", new { id = item.ID }, new { onclick = "return confirm('Сигурни ли сте, че искате да изтриете рецептата?');", @class = "btn btn-default btn-xs"})
-            </p>
-    </li>
-
-    }
-</ul>
+                }

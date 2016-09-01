@@ -23,5 +23,6 @@ namespace RecipesWebData
         public string AuthorName { get; set; }
         public string AuthorId { get; set; }
 
+        public virtual Recipe Recipes { get; set; }
     }
 }

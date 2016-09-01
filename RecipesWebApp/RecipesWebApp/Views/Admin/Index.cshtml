@@ -6,25 +6,51 @@
     ViewBag.Title = "Администраторски панел";
 }
 
-<h2>Администраторски панел</h2>
+<h2 class="text-center">Администраторски панел</h2>
+
+
 @if (this.User.IsInRole("MasterAdministrators"))
 {
-    <div id="masterAdmin">
-        @Ajax.ActionLink("Смяна на потребителски права", "ChangeRoles", "Admin", new { type = Model }, new AjaxOptions
-{
-    InsertionMode = InsertionMode.Replace,
-    UpdateTargetId = "masterAdmin"
-}, new { @class = "btn btn-default" })
-    </div>
-}
 
-@foreach (var item in Model)
-{
-    @Html.DisplayFor(x => item, "_PendingRecipeView")
-   
+    <div class="row well">
+
+        <div id="masterAdmin" class="col-md-8">
+
+            @Ajax.ActionLink("Смяна на потребителски права", "ChangeRoles", "Admin", new { type = Model }, new AjaxOptions
+           {
+               InsertionMode = InsertionMode.Replace,
+               UpdateTargetId = "masterAdmin"
+           }, new { @class = "btn btn-default" })
+        </div>
+        <div class="col-md-4">
+            <strong><h4 class="text-center">Потребители с администраторски права</h4></strong>
+            @foreach (var admin in ViewBag.Administrators)
+            {
+                <div style="text-align:center">
+                    @admin
+                </div>
+            }
+        </div>
+    </div>
+
 }
+<div class="row">
+    @foreach (var item in Model)
+    {
+        @Html.DisplayFor(x => item, "_PendingRecipeView")
+
+    }
+    <div class="col-md-4 col-md-offset-8" style="padding-right: 0">
+
+        @Html.ActionLink("Изтриване на продукти", "DeleteProduct", "Admin", null, new { @class = "btn btn-danger", style = "height: 100%; width:100%" })
+
+    </div>
+</div>
 <div class="row">
     <div class="pull-right" style="margin-right: 20px">
         @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true, DisplayItemSliceAndTotal = false })
     </div>
 </div>
+@section scripts {
+    @Scripts.Render("~/bundles/ajax")
+}

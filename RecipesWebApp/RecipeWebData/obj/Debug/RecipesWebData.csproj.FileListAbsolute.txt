@@ -35,6 +35,32 @@ D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\NAVBAR\MYTRY1\RecipesWebApp\RecipeWebData\bin
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\NAVBAR\MYTRY1\RecipesWebApp\RecipeWebData\bin\Debug\EntityFramework.SqlServer.xml
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\NAVBAR\MYTRY1\RecipesWebApp\RecipeWebData\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\NAVBAR\MYTRY1\RecipesWebApp\RecipeWebData\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\NAVBAR\MYTRY1\RecipesWebApp\RecipeWebData\obj\Debug\RecipesWebData.csprojResolveAssemblyReference.cache
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\NAVBAR\MYTRY1\RecipesWebApp\RecipeWebData\obj\Debug\RecipeWebData.dll
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\NAVBAR\MYTRY1\RecipesWebApp\RecipeWebData\obj\Debug\RecipeWebData.pdb
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipeWebData\bin\Debug\RecipeWebData.dll.config
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipeWebData\bin\Debug\RecipeWebData.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipeWebData\bin\Debug\RecipeWebData.pdb
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipeWebData\bin\Debug\EntityFramework.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipeWebData\bin\Debug\EntityFramework.SqlServer.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipeWebData\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipeWebData\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipeWebData\bin\Debug\EntityFramework.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipeWebData\bin\Debug\EntityFramework.SqlServer.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipeWebData\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipeWebData\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipeWebData\obj\Debug\RecipeWebData.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipeWebData\obj\Debug\RecipeWebData.pdb
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipeWebData\bin\Debug\RecipeWebData.dll.config
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipeWebData\bin\Debug\RecipeWebData.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipeWebData\bin\Debug\RecipeWebData.pdb
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipeWebData\bin\Debug\EntityFramework.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipeWebData\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipeWebData\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipeWebData\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipeWebData\bin\Debug\EntityFramework.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipeWebData\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipeWebData\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipeWebData\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipeWebData\obj\Debug\RecipesWebData.csprojResolveAssemblyReference.cache
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipeWebData\obj\Debug\RecipeWebData.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipeWebData\obj\Debug\RecipeWebData.pdb

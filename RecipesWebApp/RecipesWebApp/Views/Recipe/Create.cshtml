@@ -2,13 +2,13 @@
 @using RecipesWebApp.Models
 @model RecipeInputViewModel
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Създаване";
 }
 <h2 class="text-center">ДОБАВИ РЕЦЕПТА</h2>
-<div class="container" style="background-image:url('../../Images/meals.jpg')">
+<div class="container" style="background-image:url('../../Images/recipe-create-background.jpg'); border-radius: 5px;">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">argin-top: 3
-            @using (Html.BeginForm("Create", "Recipe", FormMethod.Post, new { enctype = "multipart/form-data" ,  @class = "form-horizontal", role = "form" , style="30px" } ))
+        <div class="col-md-8 col-md-offset-2">
+            @using (Html.BeginForm("Create", "Recipe", FormMethod.Post, new { enctype = "multipart/form-data" ,  @class = "form-horizontal", role = "form" , @style="margin-top: 15px"} ))
             {
                 @Html.AntiForgeryToken()
                 @Html.ValidationSummary(true)
@@ -20,7 +20,7 @@
                         </div>
                         <div class="col-md-9">
                             @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control input-group-lg", @style = "width: 100%", placeholder = "Име на рецепта" } })
-                            @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                            <strong>@Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger", @style = "color: black" })</strong>
                         </div>
                     </div>
                     <div class="form-group">
@@ -29,7 +29,7 @@
                         </div>
                         <div class="col-md-9">
                             @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control", @rows = 15 } });
-                            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                            <strong>@Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger", @style = "color: black" })</strong>
                         </div>
                     </div>
                     <div class="form-group">
@@ -42,7 +42,7 @@
                                 new SelectListItem {Text = "Предястие", Value="Предястие" },
                                 new SelectListItem {Text = "Основно ястие", Value="Основно ястие" },
                                 new SelectListItem {Text = "Десерт", Value="Десерт" } }, "--Избери категория--",  new { @class = "form-control input-group-lg text-center", @style = "text-align: center" })
-                            @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger", @style = "width: 500px" })
+                            <strong>@Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger", @style = "width: 500px; color: black" })</strong>
                         </div>
                     </div>
                     <div class="form-group">
@@ -62,7 +62,7 @@
                                     </div>
                                 }
                             </div>
-                            @Html.ValidationMessageFor(model => model.SelectProducts, "", new { @class = "text-danger", @style = "width: 500px background-color:white" })
+                            <strong>@Html.ValidationMessageFor(model => model.SelectProducts, "", new { @class = "text-danger", @style = "width: 500px; color: black" })</strong>
                         </div>
                     </div>
                     <div class="form-group">
@@ -73,7 +73,7 @@
                             <div class="input-group">
                                 @Html.TextBox("ProductName", null, new { @id = "productText", @class = "form-control", @style = "width: 100%", placeholder = "Въведи нов продукт" })
                                 <span class="input-group-btn">
-                                    <button onclick="addItem()" id="addProduct" type="button" class="btn btn-default">Добави</button>
+                                    <button onclick="addItem()" id="addProduct" type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> Добави</button>
                                 </span>
                             </div>
                             <div col-md-offset-2">
@@ -82,15 +82,30 @@
                         </div>
                     </div>
                     @Html.HiddenFor(x => x.newProduct, new { @id = "newProducts" })
-                    <div class="form-group">
+                <div class="form-group">
+                    <div class="col-md-3 labelsDeffected">
+                        @Html.Label("Избери снимка")
+                    </div>
+                    <div class="col-md-9">
+                        <input type="file" name="ChoosenFile" class="file">
+                        <div class="input-group col-xs-12 input-file-margin">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+                            <input type="text" class="form-control" disabled placeholder="Избери снимка">
+                            <span class="input-group-btn">
+                                <button class="browse btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i> Избери</button>
+                            </span>
+                        </div>
+                        </div>
+                    </div>
+                    @*<div class="form-group">
                         <div class="col-md-3 labelsDeffected">
                             @Html.Label("Избери снимка") 
                         </div>
                         <div class="col-md-9">
-                            <input type="file" id="asd" name="ChoosenFile" />
+                            <input type="file" id="asd" name="ChoosenFile" value="Избери снимка"/>
                         </div>
-                    </div>
-
+                    </div>*@
+                    
 
                     <div class="form-group ">
                         <div class="col-md-offset-2 col-md-10 ">
@@ -101,7 +116,11 @@
                
             }
             <div>
-                @Html.ActionLink("Обратно към категории", "Index", null, new {@class="btn btn-default pull-right" })
+                <a href="@Url.Action("Index")" class="btn btn-default pull-right">
+                    <span class="glyphicon glyphicon-arrow-left"></span>
+                     Обратно към категории
+                </a>
+                @*@Html.ActionLink("Обратно към категории", "Index", null, new {@class= "btn btn-default pull-right" })*@
                 <br />
                 <br/>
             </div>
@@ -121,4 +140,14 @@
         .append($("<span>").text(text));
         $('#productsList').append(li);
     }
+</script>
+
+<script>
+    $(document).on('click', '.browse', function () {
+        var file = $(this).parent().parent().parent().find('.file');
+        file.trigger('click');
+    });
+    $(document).on('change', '.file', function () {
+        $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
+    });
 </script>

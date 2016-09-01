@@ -9,11 +9,11 @@ namespace RecipesWebApp.Models
 {
     public class RecipeCollectionsViewModel
     {   
-        [UIHint("_RecipeView")]
+        [UIHint("_IndexRecipeView")]
         public ICollection<Recipe> Appetizers { get; set; }
-        [UIHint("_RecipeView")]
+        [UIHint("_IndexRecipeView")]
         public ICollection<Recipe> MainDishes { get; set; }
-        [UIHint("_RecipeView")]
+        [UIHint("_IndexRecipeView")]
         public ICollection<Recipe> Desserts { get; set; }
     }
 }

@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Рецептник</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/favico.ico" />
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/jquery.placeholder.min.js"></script>
     @Styles.Render("~/Content/css")
@@ -12,213 +13,185 @@
 
 </head>
 <body>
-    @*<nav class="navbar navbar-default">
-        <div class="container-fluid">
+   
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Brand</a>
+                <a class="navbar-brand logoBrand" href="@Url.Action("Index", "Home")"><img src="~/Images/logo2.png" /></a>
             </div>
 
+            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>*@
+                <div class="row">
+                    @*<div class="col-md-4">*@
+                    <ul class="nav navbar-nav navbar-left">
+                        @*<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>*@
 
-    @*<nav class="navbar navbar-default ">
-                <div class="container-fluid ">
-                    <div class="container-fluid ">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand" href="#">Brand</a>
-                        </div>
+                        <li>@Html.ActionLink("Начало", "Index", "Home")</li>
 
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                                <li><a href="#">Link</a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">One more separated link</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <form class="navbar-form navbar-left">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Search">
-                                </div>
-                                <button type="submit" class="btn btn-default">Submit</button>
-                            </form>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#">Link</a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div><!-- /.navbar-collapse -->
-                    </div><!-- /.container-fluid -->
-        </nav>*@
-    <!--Моя Наввв-->
-
-        <!--<div class="navbar navbar-fixed-top" style="background-color:antiquewhite">
-            <div class="container">
-                <button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-
-              <a class="navbar-brand" href="/"><img src="~/Images/logo2.png" alt="Recipes Logo" /></a>
-
-                <div class="collapse navbar-collapse navbar-responsive-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="#">Начало</a>
-                        </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-asterisk" style="padding:10px"></span>Рецепти<strong class="caret"></strong></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cutlery glyphiconPadding"></span>Рецепти <span class="caret"></span></a>
                             <ul class="dropdown-menu">
+
                                 <li>
-                                    <a href="#"><span class="glyphicon glyphicon-glass" style="padding:10px"></span>Предястие</a>
+                                    <a href="@Url.Action("Index", "Recipe")">
+                                        <span class="glyphicon glyphicon-list-alt glyphiconPadding" aria-hidden="true"></span>Рецепти
+                                    </a>
                                 </li>
-                                <li class="divider"></li>
                                 <li>
-                                    <a href="#"><span class="glyphicon glyphicon-cutlery" style="padding:10px"></span>Основно ястие</a>
+                                    <a href="@Url.Action("Create", "Recipe")">
+                                        <span class="glyphicon glyphicon-plus glyphiconPadding" aria-hidden="true"></span>Добави рецепта
+                                    </a>
                                 </li>
-                                <li class="divider"></li>
                                 <li>
-                                    <a href="#"><span class="glyphicon glyphicon-heart" style="padding:10px"></span>Десерт</a>
+                                    <a href="@Url.Action("My", "Recipe")">
+                                        <span class="glyphicon glyphicon-star-empty glyphiconPadding" aria-hidden="true"></span>Моите рецепти
+                                    </a>
                                 </li>
+
+
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    <a href="@Url.Action("Index", "Search")">
+                                        <span class="glyphicon glyphicon-eye-open glyphiconPadding" aria-hidden="true"></span>Подробно търсене
+                                    </a>
+                                </li>
+
                             </ul>
                         </li>
-                        <li class="active">
-                            <a href="#">Начало</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">Край</a>
-                        </li>
-                        <li class="active">
-                            <a href="#">Начало</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">Край</a>
-                        </li>
+                        @if (this.User.IsInRole("Administrators") || this.User.IsInRole("MasterAdministrators"))
+                        {
+                            <li>@Html.ActionLink("Администратор", "Index", "Admin")</li>
+                        }
+                        
+
                     </ul>
-                    
-                    <ul class="nav navbar-nav pull-right">
+                    @*</div>*@
+                    <ul class="nav navbar-nav navbar-right">
+
+                        @*<div class="col-md-9 col-lg-9 col-xs-9">*@
                         <li>
-                            <form class="navbar-form pull-left">
-                                <input type="text" class="form-control" placeholder="Търси рецепта" id="searchInput" />
-                                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-                            </form>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user" style="padding:10px"></span>Профил<strong class="caret" ></strong></a>
-                            <ul class="dropdown-menu pager">
-                                <li>
-                                    <a href="#"><span class="glyphicon glyphicon-log-in"  style="padding:10px"></span>Sign In</a>
-                                </li>
-                                <li>
-                                    <a href="#"><span class="glyphicon glyphicon-new-window" style="padding:10px"></span>Register</a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <a href="#"><span class="glyphicon glyphicon-off"  style="padding:10px"></span>Log Out</a>
-                                </li>
+                            @using (Html.BeginForm("SearchByTitle", "Search", FormMethod.Post, new { @class = "navbar-form", @style = "padding-top: 4px" }))
+                            {
+                                <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Търсене" name="searchingPhrase">
+                                </div>
+                                <button type="submit" class="btn btn-"><span class="glyphicon glyphicon-search"></span></button>
+                            }
+                            </li>
+                            @*</div>*@
+                            @*<div class="col-md-3 col-lg-3 col-xs-3">*@
+                            <li>
+                                @Html.Partial("_LoginPartial")
+                            </li>
+                            @*</div>
+                                <div class="col-md-3 col-lg-3 col-xs-3">*@
+
+
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user glyphiconPadding"></span>Профил<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    @if (!this.User.Identity.IsAuthenticated)
+                                    {
+                                        <li>
+                                            <a href="@Url.Action("Login", "Account")">
+                                                <span class="glyphicon glyphicon-hand-right glyphiconPadding" aria-hidden="true"></span>Вход
+                                            </a>
+                                        </li>
+                                                <li>
+                                                    <a href="@Url.Action("Register", "Account")">
+                                                        <span class="glyphicon glyphicon-hand-up glyphiconPadding" aria-hidden="true"></span>Регистрация
+                                                    </a>
+                                                </li>
+                                    }
+                                    @if (this.User.Identity.IsAuthenticated)
+                                    {
+                                        <li>
+                                            <a href="@Url.Action("Index", "Manage")">
+                                                <span class="glyphicon glyphicon-wrench glyphiconPadding" aria-hidden="true"></span>Настройки
+                                            </a>
+                                        </li>
+                                                <li>
+                                                    <a href="javascript:document.getElementById('logoutForm').submit()"><span class="glyphicon glyphicon-off glyphiconPadding" aria-hidden="true"></span>Изход</a>
+
+                                                </li>
+                                    }
+
+                                </ul>
+                            </li>
+
+                            @*</div>*@
                             </ul>
-                        </li>
-                    </ul>
-                </div>
+                        </div>
+                    </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container -->
+                </nav>
+
+
+                @*<script>
+                        $('.nav li').click(function (e) {
+                            $(this).addClass('selectedMenu');
+                        });
+                    </script>*@
+
+
+
+
+
+
+
+
+
+
+
+                <!--Стария навбар-->
+                @*<div class="navbar navbar-inverse navbar-fixed-top">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                @Html.ActionLink("РЕЦЕПТНИК", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                            </div>
+                            <div class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                    <li>@Html.ActionLink("Начало", "Index", "Home")</li>
+                                    <li>@Html.ActionLink("Рецепти", "Index", "Recipe")</li>
+                                    <li>@Html.ActionLink("Добави рецепта", "Create", "Recipe")</li>
+                                    <li>@Html.ActionLink("Моите рецепти", "My", "Recipe")</li>
+                                    <li>@Html.ActionLink("Търсене", "Index", "Search")</li>
+                                    <li>@Html.ActionLink("Admin panel", "Index", "Admin")</li>
+                                </ul>
+                                @Html.Partial("_LoginPartial")
+                            </div>
+                        </div>
+                    </div>*@
+    <div class="container body-content">
+        @Html.Partial("_Notifications")
+        @RenderBody()
+        <div class="row">
+            <div class="customFooterDiv col-md-4 col-md-offset-4">
+                <footer class="customFooter">
+                    <hr />
+                    <p>&copy; @DateTime.Now.Year - A-N-Z ASP.NET MVC Рецептник</p>
+                </footer>
             </div>
         </div>
- -->
+    </div>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        @Html.ActionLink("РЕЦЕПТНИК", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li>@Html.ActionLink("Начало", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Рецепти", "Index", "Recipe")</li>
-                            <li>@Html.ActionLink("Добави рецепта", "Create", "Recipe")</li>
-                            <li>@Html.ActionLink("Моите рецепти", "My", "Recipe")</li>
-                            <li>@Html.ActionLink("Търсене", "Index", "Search")</li>
-                            <li>@Html.ActionLink("Admin panel", "Index", "Admin")</li>
-                        </ul>
-                        @Html.Partial("_LoginPartial")
-                    </div>
-                </div>
-            </div>
-        <div class="container body-content">
-            @Html.Partial("_Notifications")
-            @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year - My ASP.NET MVC5 Рецептник</p>
-            </footer>
-        </div>
-
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
-</body>
-</html>
+                @Scripts.Render("~/bundles/jquery")
+                @Scripts.Render("~/bundles/bootstrap")
+                @RenderSection("scripts", required: false)
+            </body>
+        </html>
 

@@ -37,23 +37,70 @@ a {
 }
 
 .labels {
-    background: rgba(0, 114, 255, 0.298039);
+    /*background: rgba(0, 114, 255, 0.298039);*/
+    background: rgba(31, 32, 36, 0.6);
     border-radius: 5px;
     display: inline-block;
     text-align: right;
     vertical-align: central;
     padding-bottom: 8px;
+    color: white;
 }
 
 .labelsDeffected {
-    opacity: 0.6;
-    background-color: white;
-    opacity: 0.6;
+    background: rgba(31, 32, 36, 0.6);
+    color: white;
     border-radius: 5px;
     display: inline-block;
     text-align: right;
     vertical-align: central;
     padding-top: 7px;
+}
+
+.file {
+  visibility: hidden;
+  position: absolute;
+}
+
+.input-file-margin {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.comment-bottom-border {
+  padding-bottom: 3px;
+  
+  border-bottom: 1px solid #428bca;
+
+}
+/*---------------------------------------------------
+    Search Partial View
+-----------------------------------------------------*/
+.recipe-btn-search {
+    height: 100%; 
+    vertical-align: middle; 
+    text-align: center; 
+    border-radius: 4px;
+    border: 2px solid #808080;
+    padding: 0.3em 0.6em;
+
+}
+.recipe-btn-search:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/*----------------------------------------------------
+    Footer
+-----------------------------------------------------*/
+/*.customFooter {
+    margin: 80px;
+    text-align:center;  
+}*/
+
+.customFooterDiv {
+    margin-top: 15px;
+    text-align: center;
 }
 /*----------------------------------------------------
     Navbar                 in Home/Index View 
@@ -72,6 +119,10 @@ a {
     padding-top: 20px;
 }
 
+.selectedMenu {
+    background-color:#808080;
+}
+
 /*-----------------------------------------------------
     Carousel               in Home/Index View
 -----------------------------------------------------*/
@@ -81,16 +132,30 @@ a {
 }
 
 #myCarousel .item {
-   
+   height: 400px;
 
 }
 
+#slide1 {
+    background: url('../../Images/appetizer_crop_medium_01.jpg') top center no-repeat;
+}
+#slide2 {
+    background: url('../../Images/meal_crop_medium_02.jpg') top center no-repeat;
+}
+#slide3 {
+    background: url('../../Images/dessert_crop_medium_03.jpg') top center no-repeat;
+}
 .carousel {
     border-radius: 15px 15px;
     overflow: hidden;
 }
 
 .carouse-foodtypes-titles {
+}
+
+.logoBrand {
+    margin: 0px 10px 0px 0px;
+    padding: 0px;
 }
 
 /*#slide1 {
@@ -119,7 +184,7 @@ background: url('../../Images/dessert_medium.jpg') top center no-repeat;
 
 @media(max-width: 480px) {
     #myCarousel .item {
-        height: 200px;
+        height: 100px;
     }
 }
 
@@ -127,16 +192,27 @@ background: url('../../Images/dessert_medium.jpg') top center no-repeat;
     Landscape phone to portrait tablet            
 -----------------------------------------------------*/
 @media(max-width: 768px) {
-    #myCarousel .item {
+    #myCarousel  .item{
         height: 200px;
     }
+        #slide1 {
+    background: url('../../Images/appetizer_crop_small_01.jpg') top center no-repeat;
+}
+#slide2 {
+    background: url('../../Images/meal_crop_small_02.jpg') top center no-repeat;
+}
+#slide3 {
+    background: url('../../Images/dessert_crop_small_03.jpg') top center no-repeat;
+}
+
 }
 /*----------------------------------------------------
     Up to small desctop             
 -----------------------------------------------------*/
 @media(max-width: 979px) {
-    #myCarousel .item {
+    #myCarousel  .item{
         height: 300px;
+        
     }
 }
 /*----------------------------------------------------
@@ -145,11 +221,27 @@ background: url('../../Images/dessert_medium.jpg') top center no-repeat;
 @media(min-width: 979px) {
 
     #myCarousel .item {
-        height: 400px;
+        height: 500px;
     }
+
+    #slide1 {
+    background: url('../../Images/appetizer_crop_large_01.jpg') top center no-repeat;
+}
+#slide2 {
+    background: url('../../Images/meal_crop_large_02.jpg') top center no-repeat;
+}
+#slide3 {
+    background: url('../../Images/dessert_crop_large_03.jpg') top center no-repeat;
+}
 }
 
 /*----------------------------------------------------
     Thumbnails             in Recipe/Index View
 -----------------------------------------------------*/
 
+/*---------------------------------------------------
+    Glyphicons
+----------------------------------------------------*/
+.glyphiconPadding {
+    padding-right: 10px;
+}

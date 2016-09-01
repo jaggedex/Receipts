@@ -4,58 +4,64 @@
     ViewBag.Title = "Вход";
 }
 
-<h2>@ViewBag.Title.</h2>
+<h2 class="text-center">@ViewBag.Title</h2>
 <div class="row">
-    <div class="col-md-8">
+   
+    <div class="col-md-8 col-md-offset-2" style="background-image: url('/Images/login-background.jpg')">
         <section id="loginForm">
-            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-            {
-                @Html.AntiForgeryToken()
-                <h4>Вход с локален акаунт.</h4>
-                <hr />
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <div class="checkbox">
-                            @Html.CheckBoxFor(m => m.RememberMe)
-                            @Html.LabelFor(m => m.RememberMe)
+            <div class="col-lg-6 col-md-offset-3">
+                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", style = "margin-top: 20px" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                            <strong>@Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })</strong>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Log in" class="btn btn-default" />
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                            <strong>@Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })</strong> 
+                        </div>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <div class="checkbox">
+                                @Html.CheckBoxFor(m => m.RememberMe)
+                               @Html.LabelFor(m => m.RememberMe, new { style="color: white" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Вход" class="btn btn-success pull-left" />
+                            @Html.ActionLink("Нов потребител", "Register", null, new { @class = "btn btn-primary pull-right" })
+                        </div>
+                    </div>
+
+
+                    @*<p>
+                    @Html.ActionLink("Нов потребител", "Register", null, new { @class="btn btn-default"})
+                </p>*@
+                    @* Enable this once you have account confirmation enabled for password reset functionality
                 <p>
-                    @Html.ActionLink("Нов потребител", "Register")
-                </p>
-                @* Enable this once you have account confirmation enabled for password reset functionality
-                    <p>
-                        @Html.ActionLink("Forgot your password?", "ForgotPassword")
-                    </p>*@
-            }
+                    @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                </p>*@
+                }
+            </div>
+
         </section>
+        <div class="col-md-offset-3 col-md-9">
+            <section id="socialLoginForm pull-right" style="margin-left: 0px">
+                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+            </section>
+        </div>
     </div>
-    <div class="col-md-4">
-        <section id="socialLoginForm">
-            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-        </section>
-    </div>
+    
 </div>
 
 @section Scripts {

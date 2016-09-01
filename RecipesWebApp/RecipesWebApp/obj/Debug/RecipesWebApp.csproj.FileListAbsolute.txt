@@ -701,3 +701,423 @@ D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\NAVBAR\MYTRY1\RecipesWebApp\RecipesWebApp\bin
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\NAVBAR\MYTRY1\RecipesWebApp\RecipesWebApp\obj\Debug\RecipesWebApp.csprojResolveAssemblyReference.cache
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\NAVBAR\MYTRY1\RecipesWebApp\RecipesWebApp\obj\Debug\RecipesWebApp.dll
 D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\NAVBAR\MYTRY1\RecipesWebApp\RecipesWebApp\obj\Debug\RecipesWebApp.pdb
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\roslyn\csc.exe
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\roslyn\System.Collections.Immutable.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\roslyn\System.Reflection.Metadata.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\roslyn\vbc.exe
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\roslyn\VBCSCompiler.exe
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\roslyn\VBCSCompiler.exe.config
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\RecipesWebApp.dll.config
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\RecipesWebApp.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\RecipesWebApp.pdb
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Antlr3.Runtime.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\EntityFramework.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\EntityFramework.SqlServer.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNet.Identity.Core.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Antiforgery.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Authorization.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Cors.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.DataProtection.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Html.Abstractions.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Http.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Http.Extensions.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Http.Features.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.JsonPatch.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Localization.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Core.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Cors.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Formatters.Xml.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Localization.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Razor.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Razor.Host.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Razor.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Razor.Runtime.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Routing.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.WebUtilities.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.CodeAnalysis.CSharp.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.CodeAnalysis.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.DotNet.InternalAbstractions.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Caching.Abstractions.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Caching.Memory.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.DependencyInjection.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.DependencyModel.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.FileProviders.Composite.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.FileProviders.Physical.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Globalization.CultureInfoCache.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Localization.Abstractions.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Localization.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Logging.Abstractions.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.ObjectPool.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Options.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.PlatformAbstractions.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Primitives.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.WebEncoders.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Net.Http.Headers.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.Cookies.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.Facebook.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.Google.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.OAuth.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.Twitter.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Web.Infrastructure.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Newtonsoft.Json.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Owin.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\PagedList.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\PagedList.Mvc.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\RecipeWebData.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.AppContext.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Buffers.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Collections.Immutable.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.ComponentModel.Primitives.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.ComponentModel.TypeConverter.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Console.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Data.Common.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Diagnostics.DiagnosticSource.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Diagnostics.FileVersionInfo.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Diagnostics.StackTrace.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.IO.FileSystem.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.IO.FileSystem.Primitives.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Reflection.Metadata.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Security.Cryptography.Algorithms.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Security.Cryptography.Encoding.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Security.Cryptography.Primitives.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Security.Cryptography.X509Certificates.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Text.Encoding.CodePages.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Text.Encodings.Web.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Threading.Thread.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Web.Helpers.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Web.Mvc.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Web.Optimization.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Web.Razor.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Web.WebPages.Deployment.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Web.WebPages.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Web.WebPages.Razor.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Xml.XmlDocument.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Xml.XPath.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Xml.XPath.XDocument.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\WebGrease.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\RecipeWebData.pdb
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Antiforgery.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Authorization.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Cors.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Cryptography.Internal.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.DataProtection.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.DataProtection.Abstractions.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Html.Abstractions.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Http.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Http.Extensions.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Http.Features.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.JsonPatch.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Localization.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.ApiExplorer.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Core.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Cors.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Formatters.Xml.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Localization.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Razor.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Razor.Host.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.TagHelpers.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Razor.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Razor.Runtime.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Routing.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.WebUtilities.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Caching.Abstractions.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Caching.Memory.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.DependencyInjection.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.FileProviders.Composite.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.FileProviders.Physical.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.FileSystemGlobbing.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Globalization.CultureInfoCache.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Localization.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Localization.Abstractions.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Logging.Abstractions.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.ObjectPool.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Options.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.PlatformAbstractions.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Primitives.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.WebEncoders.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Net.Http.Headers.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Newtonsoft.Json.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\PagedList.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\PagedList.Mvc.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Diagnostics.DiagnosticSource.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Text.Encodings.Web.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Web.Helpers.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Web.Mvc.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Web.Optimization.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Web.Razor.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Web.WebPages.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Web.WebPages.Deployment.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\System.Web.WebPages.Razor.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Antlr3.Runtime.pdb
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\EntityFramework.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\EntityFramework.SqlServer.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNet.Identity.Core.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.Facebook.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.Cookies.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.OAuth.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.Google.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.Twitter.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\obj\Debug\RecipesWebApp.csprojResolveAssemblyReference.cache
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\obj\Debug\RecipesWebApp.dll
+D:\SOFTUNI SOFTWARE TECHNOLOGY NEW\Recipe_Official_Archive_30.08.2016\RecipesWebApp\RecipesWebApp\obj\Debug\RecipesWebApp.pdb
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\roslyn\csc.exe
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\roslyn\vbc.exe
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\roslyn\VBCSCompiler.exe
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\RecipesWebApp.dll.config
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\RecipesWebApp.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\RecipesWebApp.pdb
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Antlr3.Runtime.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\EntityFramework.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\EntityFramework.SqlServer.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Antiforgery.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Authorization.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Cors.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.DataProtection.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Http.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Localization.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Cors.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Formatters.Xml.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Localization.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Razor.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Razor.Host.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Razor.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Razor.Runtime.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Routing.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.CodeAnalysis.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.DotNet.InternalAbstractions.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.DependencyModel.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.FileProviders.Composite.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Globalization.CultureInfoCache.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Localization.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.ObjectPool.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Options.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.WebEncoders.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Newtonsoft.Json.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Owin.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\PagedList.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\PagedList.Mvc.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\RecipeWebData.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.AppContext.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Buffers.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Collections.Immutable.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.ComponentModel.Primitives.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.ComponentModel.TypeConverter.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Console.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Data.Common.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Diagnostics.FileVersionInfo.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Diagnostics.StackTrace.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.IO.FileSystem.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.IO.FileSystem.Primitives.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Reflection.Metadata.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Security.Cryptography.Algorithms.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Security.Cryptography.Encoding.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Security.Cryptography.Primitives.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Security.Cryptography.X509Certificates.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Text.Encoding.CodePages.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Text.Encodings.Web.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Threading.Thread.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Web.Helpers.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Web.Mvc.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Web.Optimization.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Web.Razor.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Web.WebPages.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Xml.XmlDocument.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Xml.XPath.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Xml.XPath.XDocument.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\WebGrease.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\RecipeWebData.pdb
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Antiforgery.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Authorization.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Cors.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Cryptography.Internal.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.DataProtection.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.DataProtection.Abstractions.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Html.Abstractions.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Http.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Http.Extensions.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.JsonPatch.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Localization.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.ApiExplorer.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Core.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Cors.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Formatters.Xml.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Localization.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Razor.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.Razor.Host.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.TagHelpers.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Razor.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Razor.Runtime.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Routing.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNetCore.WebUtilities.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.FileProviders.Composite.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.FileProviders.Physical.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.FileSystemGlobbing.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Globalization.CultureInfoCache.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Localization.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Localization.Abstractions.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.ObjectPool.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Options.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.PlatformAbstractions.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Extensions.WebEncoders.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Newtonsoft.Json.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\PagedList.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\PagedList.Mvc.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Text.Encodings.Web.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Web.Helpers.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Web.Mvc.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Web.Optimization.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Web.Razor.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Web.WebPages.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Antlr3.Runtime.pdb
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\EntityFramework.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\EntityFramework.SqlServer.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\obj\Debug\RecipesWebApp.csprojResolveAssemblyReference.cache
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\obj\Debug\RecipesWebApp.dll
+C:\Users\jag\Desktop\OFFICIAL RECIPE\RecipesWebApp\RecipesWebApp\obj\Debug\RecipesWebApp.pdb

@@ -5,8 +5,9 @@ namespace RecipesWebApp.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
-        [Required]
+       
         [Display(Name = "Имейл")]
+        [Required]
         public string Email { get; set; }
     }
 
@@ -48,12 +49,12 @@ namespace RecipesWebApp.Models
 
     public class LoginViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Полето \"имейл\" не може да бъде празно")]
         [Display(Name = "Имейл")]
         [EmailAddress]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Полето \"парола\" не може да бъде празно")]
         [DataType(DataType.Password)]
         [Display(Name = "Парола")]
         public string Password { get; set; }
@@ -64,13 +65,13 @@ namespace RecipesWebApp.Models
 
     public class RegisterViewModel
     {
-     
-        [Required]
+
+        [Required(ErrorMessage = "Полето \"имейл\" не може да бъде празно")]
         [EmailAddress]
         [Display(Name = "Имейл")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Полето \"парола\" не може да бъде празно")]
         [StringLength(100, ErrorMessage = "Паролата {0} трябва да бъде поне {2} символа.", MinimumLength = 3)]
         [DataType(DataType.Password)]
         [Display(Name = "Парола")]

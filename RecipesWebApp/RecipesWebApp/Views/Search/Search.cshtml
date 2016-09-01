@@ -3,10 +3,12 @@
 @{
     ViewBag.Title = "ТЪРСЕНЕ";
 }
-
-<div>
-    @Html.Partial("_SearchByType", Model.Type )
+<div class="container marginSearchTop">
+    <div class="col-md-10 col-md-offset-1">
+        @Html.Partial("_SearchByType", Model)
+    </div>
 </div>
+
 
 @section scripts {
     @Scripts.Render("~/bundles/ajax")

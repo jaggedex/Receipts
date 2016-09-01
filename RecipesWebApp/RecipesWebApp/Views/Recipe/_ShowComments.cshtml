@@ -1,12 +1,10 @@
 ﻿@using (Html.BeginForm())
 {
-<div>
-    @Html.TextBox("CommentText", null, new { @class = "form-control", @style = "width: 500px" })
-    
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Добави коментар" class="btn btn-default" />
-        </div>
+
+    <div class="input-group">
+        <span class="input-group-btn"><input type="submit" value="Добави коментар" class="btn btn-default" style="display: inline-block" /></span>
+        @Html.TextBox("CommentText", null, new { @class = "form-control", @style = "width: 100%" , placeholder="Добави коментар"})
+        
     </div>
-</div>
+
 }

@@ -3,6 +3,32 @@
 @{
     ViewBag.Title = "ReceiptsView";
 }
+
+
 <div class="well">
-    @Html.ActionLink(Model.Title, "Confirm", "Admin", new { id = Model.ID }, null)
+    <div class="page-header">
+        <h3>
+            @Html.ActionLink(Model.Title, "Confirm", "Admin", new { id = Model.ID }, new { @style = "text-decoration: none" })
+        </h3>
+    </div>
+
+    <p class="lead">
+        @{
+            var count = 0;
+            if (Model.Description.Length < 147)
+            {
+                count = Model.Description.Length;
+            }
+            else
+            {
+                count = 147;
+            }
+            var descriptionSubstr = Model.Description.Substring(0, count);
+            if (Model.Description.Length > 147)
+            {
+                descriptionSubstr += "...";
+            }
+            @descriptionSubstr
+        }
+    </p>
 </div>

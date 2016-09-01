@@ -31,7 +31,7 @@ namespace RecipesWebApp.Models
         [Display(Name = "Необходими продукти")]
         public  ICollection<Product> Products { get; set; }
 
-        [AllowHtml]
+        
         [DataType(DataType.MultilineText)]
         [Required(ErrorMessage = "Описанието не може да бъде празно!")]
         [StringLength(2000, ErrorMessage = "Описанието на рецептата трябва да съдържа поне 10 символа.", MinimumLength = 10)]
@@ -49,6 +49,9 @@ namespace RecipesWebApp.Models
 
         public string CurrentUserId { get; set; }
 
+        public int OldRecipeId { get; set; }
+
+
         public ICollection<Comment> Comments { get; set; }
 
         public ICollection<Rating> Ratings { get; set; }
@@ -57,6 +60,7 @@ namespace RecipesWebApp.Models
 
         public string newProduct { get; set; }
 
+        [Display(Name = "Снимка")]
         public byte[] Image { get; set; }
 
         public static Expression<Func<Recipe, RecipeInputViewModel>> ViewModel
@@ -74,7 +78,8 @@ namespace RecipesWebApp.Models
                     AuthorId = e.AuthorId, 
                     Ratings = e.Ratings,
                     Comments = e.Comments,
-                    Image = e.Image
+                    Image = e.Image,
+                    User = e.Author.UserName
                 };
             }
         }

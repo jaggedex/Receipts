@@ -1,11 +1,11 @@
 ﻿@using RecipesWebApp.Models
 @model SearchViewModel
 @{
-    ViewBag.Title = "Search By One Product";
+    ViewBag.Title = "Търсене по един продукт";
 }
 
-<h2>Рецепти с пълно съвпадение на избраните от вас продукти:</h2>
-<div>
+<h2 class="text-center">Рецепти с пълно съвпадение на избраните от вас продукти:</h2>
+<div class="text-center">
     @if (Model.MatchedByAll.Count() != 0)
     {
         @Html.DisplayFor(x => x.MatchedByAll)
@@ -19,8 +19,8 @@
 <br />
 <hr />
 <br />
-<h2>Рецепти с един липсващ продукт на избраните от вас:</h2>
-<div>
+<h2 class="text-center">Рецепти с един липсващ продукт на избраните от вас:</h2>
+<div class="text-center">
     @if (Model.MatchedWithoutOne.Count() != 0)
     {
         @Html.DisplayFor(x => x.MatchedWithoutOne)

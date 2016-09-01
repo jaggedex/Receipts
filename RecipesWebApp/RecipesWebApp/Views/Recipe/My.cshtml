@@ -3,10 +3,10 @@
 @using RecipesWebData
 @model IPagedList<Recipe>
 @{
-    ViewBag.Title = "My";
+    ViewBag.Title = "Моите рецепти";
 }
 
-<h2>My</h2>
+<h2 class="text-center">МОИТЕ РЕЦЕПТИ</h2>
 
 @Html.DisplayFor(d => d, "_RecipeView")
 @Html.PagedListPager(Model, page => Url.Action("My", new { page }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true, DisplayItemSliceAndTotal = true })
